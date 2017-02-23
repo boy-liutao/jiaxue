@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="js/flexible_css.js"></script>
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    <title>首次注册专享大礼</title>
+</head>
+<body>
+<form action="">
+    <div class="s_wrap" style="display: block">
+        <img  class="s_background" src="img/background.jpg" alt=""/>
+        <div class="s_register" style="display: block">
+            <div class="ipt">
+                <img class="iphone_icon" src="img/iphone.png" alt=""/>
+                <input type="text" class="tel" placeholder="请输入手机号"/>
+            </div>
+            <div class="verification">
+                <input type="text" class="veri_inp" placeholder="请输入验证码"/>
+                <input type="button" class="veri_btn" value="获取验证码"/>
+            </div>
+            <div class="receive_btn"></div>
+            <!--<div id="addBox" style="display:block;">发送成功</div>-->
+        </div>
+        <div class="s_enrolled" style="display: none;">
+            <span class="tele">呀，礼包溜了</span>
+            <span class="tip">快来学吗，更多好礼等你拿！</span>
+            <div class="see_btn"></div>
+        </div>
+        <div class="down_btn"></div>
+        <div id="popup" style="display: none">发送成功！</div>
+    </div>
+</form>
+<form action="">
+    <div class="mask_content" style="display: none">
+        <div style="height: 0.75rem"></div>
+        <div class="c_header">
+            <span>学习阶段</span>
+            <img class="close" src="img/close.png" alt=""/>
+        </div>
+        <hr/>
+        <div class="c_grade">
+            <div class="selects">
+                <input type="radio" name="grade" class="primary" id="primary"/>
+                <!--<img src="img/unselected.png" alt="" />-->
+                <label for="primary" class="s_tip">小学</label>
+            </div>
+            <div class="selects dis">
+                <input type="radio" name="grade" class="junior" id="junior"/>
+                <label for="junior" class="s_tip">初中</label>
+            </div>
+            <div class="selects dis">
+                <input type="radio" name="grade" class="senior" id="senior"/>
+                <label for="senior" class="s_tip">高中</label>
+            </div>
+        </div>
+        <div class="c_want">
+            <span>您希望</span>
+        </div>
+        <hr/>
+        <div class="c_hope">
+            <div class="selects">
+                <input type="radio" name="hope" class="live" id="live"/>
+                <label for="live" class="s_tip">一对一视频授课</label>
+            </div>
+            <div class="selects dis">
+                <input type="radio" name="hope" class="tutor" id="tutor"/>
+                <label for="tutor" class="s_tip">老师到您家上课</label>
+            </div>
+            <div class="selects dis">
+                <input type="radio" name="hope" class="classroom" id="classroom"/>
+                <label for="classroom" class="s_tip">到学吗学堂上课</label>
+            </div>
+        </div>
+        <div class="c_name">
+            <span>姓名</span>
+        </div>
+        <div class="inp">
+            <input class="inp_name" type="text" placeholder="我们如何称呼您"/>
+        </div>
+        <div class="submit_btn"></div>
+    </div>
+</form>
+<div class="mask_bg" style="display: none"></div>
+<div class="mask_con" style="display: none">
+    <img class="congratulation" src="img/congratulation.png" alt=""/>
+    <img class="used_btn" src="img/use.png" alt=""/>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script style="text/javascript" src="js/main.js"></script>
+
+<script type="text/javascript">
+    $('.c_grade input[type=radio]').each(function () {
+        $(this).click(function () {
+            $(this).closest('.c_grade').find('input[type=radio]').css('background','url(img/unselected.png)');
+            $(this).css('background','url(img/selected.png)');
+        });
+    });
+    $('.c_hope input[type=radio]').each(function () {
+        $(this).click(function () {
+            $(this).closest('.c_hope').find('input[type=radio]').css('background','url(img/unselected.png)');
+            $(this).css('background','url(img/selected.png)');
+        });
+    });
+</script>
+
+</body>
+</html>

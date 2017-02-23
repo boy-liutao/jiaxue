@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable =no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src="js/flexible_css.js"></script>
+    <title>家学托管</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft Yahei","SIMHei","\5b8b\4f53",simsun,sans-serif;
+            background-color: #efefef;
+            color:#595757;
+            width: 10rem;
+            height: 16.24rem;
+        }
+        button{
+            width: 7.5333rem;
+            height: 1.0267rem;
+            display: block;
+            margin: 0.8267rem auto;
+            font-size: 0.42rem;
+            border: none;
+            border-radius: 0.2rem;
+            text-align: center;
+            line-height: 1.0267rem;
+        }
+        .back_btn{
+            background: #0099d9;
+            color: #ffffff;
+        }
+        .close_btn{
+            background: #ffffff;
+            color: #595757;
+        }
+        .logo{
+            width: 3.4267rem;
+            height: 1.16rem;
+            position: absolute;
+            bottom: 1rem;
+            left: 3.2868rem;
+        }
+    </style>
+</head>
+<body id="afterAli_wrap">
+    <img src="img/after_ali01.jpg" alt="" style="width: 10rem;height: 7.5067rem;"/>
+    <button id="back_btn" class="back_btn">返回i家学首页</button>
+    <button id="colse_btn" class="close_btn" onclick="window.close()">关闭</button>
+    <img class="logo" src="img/after_ali02.png" alt=""/>
+    <script type="text/javascript">
+        var oBtn = document.getElementById('back_btn');
+        var oClose = document.getElementById('colse_btn');
+        oBtn.onclick = function () {
+            window.location.href = 'weixin://';
+        };
+        oClose.onclick = function(){
+            window.opener=null;
+            window.open('','_self');
+            window.close();
+        };
+    </script>
+</body>
+</html>

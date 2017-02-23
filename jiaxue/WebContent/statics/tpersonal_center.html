@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable =no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script type="text/javascript" src="../js/flexible.js"></script>
+    <script type="text/javascript" src="../js/flexible_css.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/main.css"/>
+    <title>个人中心</title>
+</head>
+<body id="tcenter_wrap">
+    <img class="head_img" src="../img/tcenter01.png" alt="花边"/>
+    <div class="header">
+        <img class="avatar" src="../img/edit01.png" alt="头像"/>
+        <div class="fr">
+            <hgroup>
+                <h2><span class="t_name">林溪</span><img class="sex_img" src="../img/tcenter04.png" alt=""/></h2>
+                <h4><span class="t_school">润枫学堂</span><span class="t_tel">13612341234</span></h4>
+            </hgroup>
+            <button class="change_avatar_btn">更换头像</button>
+            <div class="clearfix"></div>
+            <div class="signature_block">
+                <img class="edit_img" src="../img/tcenter02.png" alt=""/>
+                <p class="signature">编辑个性签名！</p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <hr class="hr1"/>
+    <div class="content">
+        <p>相册</p>
+        <img  class="photo photo1" src="../img/edit01.png" alt=""/>
+        <img  class="photo" src="../img/edit01.png" alt=""/>
+        <img  class="photo" src="../img/edit01.png" alt=""/>
+        <img  class="arrow" src="../img/tarrow.png" alt=""/>
+        <div class="clearfix"></div>
+
+    </div>
+    <hr/>
+    <div id="personal_footer">
+        <h5>北京家学天地网络科技有限公司</h5>
+        <h5>○2016&nbsp;All&nbsp;Rights&nbsp;Reserved</h5>
+    </div>
+
+    <!--输入个性签名框-->
+    <div id="signature_mask">
+        <!--<div id="signature_opacity" class="signature_opacity"></div>-->
+        <div class="signature_frame signatures" id="signature_frame">
+            <textarea class="signature_textarea signatures" id="signature_textarea"></textarea>
+            <div class="signature_remind signatures" id="signature_remind">
+                <h5 class="remind signatures" id="remind">编辑个性签名！</h5>
+            </div>
+        </div>
+        <button class="save_btn signatures" id="save_btn">保存</button>
+    </div>
+    <!--保存失败 提示不能输入没空-->
+    <div class="fail_popup" style="display: none">不能输入为空！</div>
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+            //跳转到albu页面
+            $('.album').click(function () {
+                window.location.href = "t_album.html";
+            });
+
+            //点击个性签名
+            $('.signature_block').click(function () {
+                var oval = $('.signature').text();
+                if(oval != "编辑个性签名！"){
+                    $('.signature_textarea').val(oval);
+                    $('.signature_textarea').css('opacity','1');
+                }
+                $('#signature_mask').slideDown();
+            });
+            //点击保存
+            $('#save_btn').click(function () {
+                var oval = $('.signature_textarea').val();
+                console.log(oval);
+                if(oval == ""){
+//                    alert("不能输入为空");
+                    $('.fail_popup').fadeIn(1000).fadeOut(2000);
+                }else if(oval.length > 10){
+                    alert('最多输入30个文字');
+                    $('.signature_textarea').val(oval.substring(0,30));
+                }else{
+                    $('#signature_mask').fadeOut();
+                    $('.signature').text(oval);
+                }
+            });
+            //输入个性签名
+            $('.signature_textarea').click(function () {
+                $(this).css('opacity','1');
+//            $('.feedback_remind').hide();
+            });
+            $('.signature_textarea').blur(function () {
+                var oval = $('.signature_textarea').val();
+                if(oval == ""){
+                    $(this).css('opacity','0');
+                }
+            });
+//            $('#signature_opacity').click(function () {
+//                $('#signature_mask').fadeOut();
+//            });
+        });
+
+
+        window.onload= function () {
+            //点击所要div外其他位置，整个遮罩层隐藏(选择学校和课堂的遮罩层)
+            var oMask = document.getElementById('signature_mask');
+            var oFrame = document.getElementById('signature_frame');
+            var oTextarea = document.getElementById('signature_textarea');
+
+            var sRemind = document.getElementById('signature_remind');
+            var oRemind = document.getElementById('remind');
+
+            var oBtn = document.getElementById('save_btn');
+            oMask.onclick = function (event) {
+                var e = event || window.event;
+                var aim = e.srcElement || e.target;
+                if(e.srcElement){
+                    var aim = e.srcElement;
+                    if(aim != oFrame && aim != oBtn && aim != oTextarea && aim != sRemind && aim != oRemind){
+                        oMask.style.display = 'none';
+                    }
+                }else{
+                    var aim = e.target;
+                    if(aim != oFrame && aim != oBtn && aim != oTextarea && aim != sRemind && aim != oRemind){
+                        oMask.style.display = 'none';
+                    }
+                }
+            };
+        };
+    </script>
+</body>
+</html>

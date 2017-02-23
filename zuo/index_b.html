@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>学霸测试</title>
+</head>
+<body>
+<div id="classroom">
+</div>
+<div id="result">
+</div>
+<div id="name-input" style="margin-top:30px">
+</div>
+<div id="start-btn"></div>
+<div id="qrcode"></div>
+<script type="text/javascript" src="http://cdnjs.gtimg.com/cdnjs/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/style.js?v=1.5"></script>
+<script type="text/javascript" src="js/test.js?v=1.6"></script>
+<script>
+loadClassroom();
+loadBtn();
+function loadBtn(){
+	var id = urlparameter("id");
+	if ((id == null || id == '' || id == undefined)){
+		$("#classroom").html("<img src='images/classroom_init.jpg'></img>");
+		$("#name-input").html("请输入姓名<input id='username'></input>");
+		$("#start-btn").html("<button style=\"margin-top:10px\" onClick=\'javascript:start()\'>开始测试</button>");
+	} else {
+		$("#start-btn").html("<a href='index.html?fromid="+id+"'>我也要测试</a>");
+	}
+}
+</script>
+</body>
+</html>

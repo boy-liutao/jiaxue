@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable =no">
+    <script type="text/javascript" src="../js/flexible.js"></script>
+    <script type="text/javascript" src="../js/flexible_css.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+    <title>i家学-教师版</title>
+    <script type="application/javascript" src="../js/iscroll.js"></script>
+    <style type="text/css">
+        #scroller {
+            position:relative;
+            -webkit-touch-callout:none;
+            -webkit-tap-highlight-color:rgba(0,0,0,0);
+            float:left;
+            width:100%;
+            /*height: 100%;*/
+            padding:0;
+        }
+        #pullUp .pullUpIcon  {
+            display:none;
+            -webkit-transition-property:-webkit-transform;
+            -webkit-transition-duration:250ms;
+            margin-left: 4.2rem;
+        }
+
+        #pullUp.flip .pullUpIcon {
+            -webkit-transform:rotate(0deg) translateZ(0);
+        }
+
+        #pullUp.loading .pullUpIcon {
+            background-position:0 100%;
+            -webkit-transform:rotate(0deg) translateZ(0);
+            -webkit-transition-duration:0ms;
+
+            -webkit-animation-name:loading;
+            -webkit-animation-duration:2s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:linear;
+        }
+
+        @-webkit-keyframes loading {
+            from { -webkit-transform:rotate(0deg) translateZ(0); }
+            to { -webkit-transform:rotate(360deg) translateZ(0); }
+        }
+    </style>
+</head>
+<body>
+<div id="teacher_wrap">
+    <div id="teacher_header">
+        <input class="initial_search_inp" type="text" placeholder="搜索学生"/>
+        <!--<img class="search_icon" src="../img/teacher00.png" alt=""/>-->
+        <button id="teacher_search_btn">搜索</button>
+    </div>
+    <div id="search_content" style="display: none">
+        <div class="history_search">
+            <div>
+                <span class="history_tit">搜索历史：</span>
+                <span class="histroy_clear">清除</span>
+            </div>
+            <hr style="margin-top: 0.2rem;margin-bottom: 0.3733rem;"/>
+            <div class="history_record">
+                <button>李大伟</button>
+                <button>李大</button>
+                <button>李</button>
+                <button>李大伟</button>
+                <button>李大伟</button>
+            </div>
+        </div>
+    </div>
+    <div id="teacher_nav">
+        <div class="teacher_nav_header">
+            <div class="teacher_nav_school">
+                <figure class="select_school_block">
+                    <figcaption>所有学堂</figcaption>
+                    <img class="select_school_arrow" src="../img/teacher01.png" alt="" />
+                    <div class="clearfix"></div>
+                </figure>
+            </div>
+            <div class="teacher_nav_class">
+                <figure class="select_class_block">
+                    <figcaption>所有班级</figcaption>
+                    <img class="select_class_arrow" src="../img/teacher01.png" alt="" />
+                    <div class="clearfix"></div>
+                </figure>
+            </div>
+        </div>
+        <div class="teacher_content" id="teacher_content">
+            <div id="scroller">
+                <div class="teacher_content_block">
+                    <img class="teacher_stu_avatar" src="../img/edit01.png" alt="" style="width: 1.6267rem;height: 1.6267rem"/>
+                    <div class="unread_icon"></div>
+                    <div class="teacher_block_fr">
+                        <h2 class="teacher_stu_username">陈小涛</h2>
+                        <h4><span>润枫校区</span>&nbsp;/&nbsp;<span>润枫学校</span>&nbsp;/&nbsp;<span>三年级</span>&nbsp;</h4>
+                        <h5><span>今日接孩子时间：</span><span>16:00</span></h5>
+                    </div>
+                    <button class="babySign_btn">宝贝签到</button>
+                    <button class="writeComments_btn" style="display: none">写评语</button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="teacher_content_block">
+                    <img class="teacher_stu_avatar" src="../img/edit01.png" alt="" style="width: 1.6267rem;height: 1.6267rem"/>
+                    <div class="unread_icon"></div>
+                    <div class="teacher_block_fr">
+                        <h2 class="teacher_stu_username">陈小涛</h2>
+                        <h4><span>润枫校区</span>&nbsp;/&nbsp;<span>润枫学校</span>&nbsp;/&nbsp;<span>三年级</span>&nbsp;</h4>
+                        <h5><span>今日接孩子时间：</span><span>16:00</span></h5>
+                    </div>
+                    <button class="babySign_btn" style="display: none">宝贝签到</button>
+                    <button class="writeComments_btn" style="display: block">写评语</button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="teacher_content_block">
+                    <img class="teacher_stu_avatar" src="../img/edit01.png" alt="" style="width: 1.6267rem;height: 1.6267rem"/>
+                    <div class="teacher_block_fr">
+                        <h2 class="teacher_stu_username">陈小涛</h2>
+                        <h4><span>润枫校区</span>&nbsp;/&nbsp;<span>润枫学校</span>&nbsp;/&nbsp;<span>三年级</span>&nbsp;</h4>
+                        <h5><span>今日接孩子时间：</span><span>16:00</span></h5>
+                    </div>
+                    <button class="babySign_btn" style="display: none">宝贝签到</button>
+                    <button class="writeComments_btn" style="display: none">写评语</button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="teacher_content_block">
+                    <img class="teacher_stu_avatar" src="../img/edit01.png" alt="" style="width: 1.6267rem;height: 1.6267rem"/>
+                    <div class="teacher_block_fr">
+                        <h2 class="teacher_stu_username">陈小涛</h2>
+                        <h4><span>润枫校区</span>&nbsp;/&nbsp;<span>润枫学校</span>&nbsp;/&nbsp;<span>三年级</span>&nbsp;</h4>
+                        <h5><span>今日接孩子时间：</span><span>16:00</span></h5>
+                    </div>
+                    <button class="babySign_btn" style="display: none">宝贝签到</button>
+                    <button class="writeComments_btn" style="display: none">写评语</button>
+                    <div class="clearfix"></div>
+                </div>
+                <ul id="content"></ul>
+                <div id="pullUp">
+                    <img id="pullUpIcon" class="pullUpIcon" src="../img/loading.png" style="width: 0.5rem;height: 0.5rem"/>
+                </div>
+            </div>
+        </div>
+
+        <div id="teacher_footer">
+            <h5>北京家学天地网络科技有限公司</h5>
+            <h5>○2016&nbsp;All&nbsp;Rights&nbsp;Reserved</h5>
+        </div>
+        <img id="teacher_hide_mask" src="../img/teacher03.png" alt="" style="display: none"/>
+        <!--页面底端教师信息-->
+        <div id="teacher_foot_mask">
+            <img id="foot_mask_show" src="../img/teacher04.png" alt="" style="width: 0.64rem;height: 0.1067rem;margin: 0.1rem auto 0;"/>
+            <div class="foot_mask_content">
+                <img class="teacher_myavatar" src="../img/edit01.png" alt=""/>
+                <div class="foot_mask_fr">
+                    <h4>林溪老师</h4>
+                    <h5>已绑定账号：<span class="teacher_tel">13621273456</span></h5>
+                    <div class="floor3">
+                        <button class="change_avatar">更换头像</button>
+                        <button class="teacher_unbind">解除绑定</button>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div id="unbind_whether_mask" style="display: none;">
+        <div class="unbind_prompt">
+            <h5>解除绑定后，您将无法继续使</h5>
+            <h5 class="tit2">用i家学老师版，是否继续？</h5>
+            <hr style="background: lightgrey;height: 0.03rem;"/>
+            <hgroup class="unbind_prompt_confirm">
+                <h5 class="unbind_cancel">取消</h5>
+                <h5 class="unbind_continue">继续</h5>
+                <div class="clearfix"></div>
+            </hgroup>
+        </div>
+    </div>
+    <div id="unbind_popup_mask" style="display: none">
+        <div id="unbind_popup">
+            <span>您的账号已解除绑定</span>
+        </div>
+    </div>
+    <!--选择学堂和班级的遮罩层-->
+    <div id="teacher_select_mask" style="display: none">
+        <ul class="mask_select_school" id="mask_select_school" style="display: none">
+            <li>远洋学堂</li>
+            <li>润丰学堂</li>
+        </ul>
+        <ul class="mask_select_class" id="mask_select_class" style="display: none">
+            <li>一年级</li>
+            <li>二年级</li>
+            <li>三年级</li>
+            <li>四年级</li>
+            <li>五年级</li>
+            <li>六年级</li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <!--宝贝签到页面-->
+    <div id="teacher_babySign_mask" style="display: none">
+        <div class="babySign_content">
+            <div class="babySign_content_header">
+                <strong>宝贝签到</strong>
+                <span>先给家长捎句话吧</span>
+            </div>
+            <ul class="babySign_content_center">
+                <li><span>佳佳</span>已安全到达托管中心啦，您就放心吧！</li>
+                <li>家学托管，不负所托，我们已把小<span>佳佳</span>接到托管中心了！</li>
+                <li>孩子健康成长，比什么都重要，您看<span>佳佳</span>小同学，吃水果时多快乐啊！</li>
+                <li>接孩子是大事，我们从不苟且，看，小<span>佳佳</span>已经在吃水果了！</li>
+                <li><span>佳佳</span>安全到达托管中心，已经开始专心地写作业了！</li>
+                <li><span>佳佳</span>今天很开心，已经接到她了，您尽管放心就好！</li>
+
+                <li>托管无小事，安全到达最重要，<span>佳佳</span>已经到托管中心了！</li>
+                <li><span>佳佳</span>在托管中心已经开始和小伙伴们一起享用美味的加餐了！</li>
+                <li><span>佳佳</span>到托管中心啦，吃过水果，就开始写作业了！</li>
+                <li><span>佳佳</span>今天很乖，现在已经到托管中心了，您就放心吧！</li>
+
+            </ul>
+            <div class="babySign_content_footer">
+                <input class="babySign_inp" type="text"/>
+                <label><span class="babysign_next_btn">下一步</span></label>
+            </div>
+        </div>
+    </div>
+    <!--点击下一步拍照上传页面-->
+    <div id="babySign_uppic_mask" style="display: none">
+        <div class="uppic_popup" id="uppic_popup">
+            <h2>上传图片签到</h2>
+            <figure>
+                <img src="../img/edit05.png" alt="" style="width: 0.96rem;height: 0.8133rem;"/>
+                <figcaption class="tit1">从相册中选择</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/edit06.png" alt="" style="width: 0.8667rem;height: 0.76rem;"/>
+                <figcaption class="tit2">拍照</figcaption>
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+    //点击选择学堂
+    $('body').on('click','.teacher_nav_school', function () {
+        if($('.select_school_arrow').attr("src") =="../img/teacher01.png"){
+            $('.select_school_arrow').attr("src","../img/teacher02.png");
+            $('#teacher_select_mask').slideDown();
+            $('.mask_select_school').slideDown();
+        }
+        else{
+            $('.select_school_arrow').attr("src","../img/teacher01.png");
+            $('.mask_select_school').slideUp();
+
+        }
+    });
+    $('.mask_select_school li').each(function () {
+        $(this).click(function () {
+            var oval = $(this).text();
+            $('#teacher_select_mask').slideUp();
+            $('.mask_select_school').slideUp();
+            $('.select_school_block figcaption').text(oval);
+            $('.select_school_arrow').attr("src","../img/teacher01.png");
+        });
+    });
+    //点击选择班级
+    $('.teacher_nav_class').click(function () {
+        if($('.select_class_arrow').attr("src") =="../img/teacher01.png"){
+            $('.select_class_arrow').attr("src","../img/teacher02.png");
+            $('#teacher_select_mask').slideDown();
+            $('.mask_select_class').slideDown();
+        }
+        else{
+            $('.select_class_arrow').attr("src","../img/teacher01.png");
+            $('.mask_select_class').slideUp();
+        }
+    });
+    $('.mask_select_class li').each(function () {
+        $(this).click(function () {
+            var oval = $(this).text();
+            $('#teacher_select_mask').slideUp();
+            $('.mask_select_class').slideUp();
+            $('.select_class_block figcaption').text(oval);
+            $('.select_class_arrow').attr("src","../img/teacher01.png");
+        });
+    });
+
+    //点击宝贝签到
+    $('.babySign_btn').click(function () {
+        $('#teacher_babySign_mask').slideDown();
+    });
+    //点击默认的文本
+    $('.babySign_content_center li').each(function () {
+        $(this).click(function () {
+            var oval = $(this).text();
+            $(this).addClass('changefontColor').siblings('li').removeClass('changefontColor');
+            $('.babySign_inp').val(oval);
+        });
+    });
+    //点击宝贝签到弹出页面中的“下一步”
+    $('.babysign_next_btn').click(function () {
+        $('#teacher_babySign_mask').fadeOut();
+        $('#babySign_uppic_mask').fadeIn();
+    });
+    //点击页面底部遮罩层
+    $('#teacher_hide_mask').click(function () {
+        $(this).hide();
+        $('#teacher_foot_mask').fadeIn();
+    });
+//    $('#foot_mask_show').click(function () {
+//        $('#teacher_foot_mask').fadeOut();
+//        $('#teacher_hide_mask').show();
+//    });
+
+    //解除绑定
+    $('.teacher_unbind').click(function () {
+        $('#unbind_whether_mask').fadeIn();
+    });
+    $('.unbind_cancel').click(function () {
+        $('#unbind_whether_mask').fadeOut();
+    });
+    $('.unbind_continue').click(function () {
+        $('#unbind_whether_mask').fadeOut();
+        $('#unbind_popup_mask').delay(1000).fadeIn(1000);
+        $('#unbind_popup_mask').delay(1500).fadeOut(1000);
+    });
+    //点击所要div外其他位置，整个遮罩层隐藏(选择学校和课堂的遮罩层)
+    window.onload= function () {
+        var selectSchool = document.getElementById('mask_select_school');
+        var selectClass = document.getElementById('mask_select_class');
+        var selectMask = document.getElementById('teacher_select_mask');
+        selectMask.onclick = function (event) {
+            var e = event || window.event;
+            var aim = e.srcElement || e.target;
+            if(e.srcElement){
+                var aim = e.srcElement;
+                if(aim != selectSchool && aim != selectClass){
+                    selectMask.style.display = 'none';
+                }
+            }else{
+                var aim = e.target;
+                if(aim != selectSchool && aim != selectClass){
+                    selectMask.style.display = 'none';
+                }
+            }
+        };
+    };
+
+
+    var myScroll, pullDownEl, pullDownOffset, pullUpEl, pullUpOffset;
+    /**
+     * 滚动翻页 （自定义实现此方法）
+     * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+     *
+     */
+    function pullUpAction () {
+        setTimeout(function () {
+            var el, li, i;
+            el = document.getElementById('content');
+
+            for (i=1; i<3; i++) {
+                li = document.createElement('li');
+                li.style.listStyleType = 'none';
+                li.innerHTML ="<div class='teacher_content_block'>" +
+                                "<img class='teacher_stu_avatar' src='../img/edit01.png' style='width: 1.6267rem;height: 1.6267rem'/>"+
+                                "<div class='teacher_block_fr'>" +
+                                    "<h2 class='teacher_stu_username'>陈小涛</h2>"+
+                                    "<h4><span>润枫校区</span>&nbsp;/&nbsp;<span>润枫学校</span>&nbsp;/&nbsp;<span>三年级</span>&nbsp;</h4>"+
+                                    "<h5><span>今日接孩子时间：</span><span>16:00</span></h5>"+
+                                "</div>"+
+                                "<button class='babySign_btn' style='display: none'>宝贝签到</button>"+
+                                "<button class='writeComments_btn' style='display: none'>写评语</button>"+
+                                "<div class='clearfix'></div>"+
+                              "</div>"
+                el.appendChild(li, el.childNodes[0]);
+            }
+
+            myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+        }, 1000);
+    }
+
+    /**
+     * 初始化iScroll控件
+     */
+    function loaded() {
+        pullUpEl = document.getElementById('pullUp');
+        pullUpOffset = pullUpEl.offsetHeight;
+        pullUpicon = document.getElementById('pullUpIcon');
+
+        myScroll = new iScroll('teacher_content', {
+            scrollbarClass: 'myScrollbar', /* 重要样式 */
+            useTransition: false, /* 此属性不知用意，本人从true改为false */
+            onRefresh: function () {
+                if (pullUpEl.className.match('loading')) {
+                    pullUpEl.className = '';
+                    pullUpicon.style.display = 'none';
+                }
+            },
+            onScrollMove: function () {
+                if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                    $('#teacher_foot_mask').fadeOut();
+                    $('#teacher_hide_mask').show();
+                    pullUpEl.className = 'flip';
+                    this.maxScrollY = this.maxScrollY;
+                } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+                    pullUpEl.className = '';
+                    this.maxScrollY = pullUpOffset;
+                }
+            },
+            onScrollEnd: function () {
+                if (pullUpEl.className.match('flip')) {
+                    pullUpicon.style.display = 'block';
+                    pullUpEl.className = 'loading';
+                    pullUpAction();
+                }
+            }
+        });
+
+        setTimeout(function () { document.getElementById('teacher_content').style.left = '0'; }, 800);
+    }
+
+    //初始化绑定iScroll控件
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

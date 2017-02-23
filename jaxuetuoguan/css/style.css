@@ -1,0 +1,804 @@
+@charset "utf-8";
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft Yahei","SIMHei","\5b8b\4f53",simsun,sans-serif;
+    color: #595757;
+    background: #ffffff;
+}
+
+.row{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+
+/*导航区*/
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
+    margin-left: -98px;
+}
+.navbar-default{
+    color: #101010;
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-nav>li{
+    float: right;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #101010;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+    color: #0599D9;
+    background-color: transparent;
+}
+.navbar{
+    min-height:58px;
+}
+.navbar-nav{
+    background-color: #ffffff;
+    width: 35%;
+    float: right;
+    text-align: right;
+}
+.logo{
+    padding:0;
+}
+.logo_img{
+    width: 60%;
+    margin-top: 5px;
+}
+#navbar-collapse ul{
+    margin-top:0;
+}
+
+/*轮播图区*/
+.jq22-content{
+    font-size:0;
+}
+/*标题区*/
+.tab-h2{
+    /*border: 1px solid red;*/
+    font-size: 20px;
+    text-align: center;
+    color: #0599D9;
+    letter-spacing: 1px;
+    margin-top: 66px;
+}
+.dot{
+    width: 15px;
+    height: 15px;
+    margin-top: 20px;
+    background: #81cff3;
+    border-radius: 50%;
+    float: left;
+}
+.dot_right{
+    float: right;;
+}
+.tab-p{
+    font-size: 15px;
+    text-align: center;
+    color: #595757;
+    letter-spacing: 1px;
+}
+.tab_hr{
+    width: 90px;
+    height: 1px;
+    float: left;
+    color: #000;
+    background-color: #000;
+}
+.tab_hr_right{
+    float: right;
+}
+.tab1_h2_section{
+    width: 278px;
+    margin: 0 auto;
+}
+.tab_headline{
+}
+
+.tab1_p_section{
+    width:571px;
+    margin: 0 auto;
+}
+.tab_p_headline{
+    position: relative;
+    top: 8px;
+}
+/*tab1区 -- 习惯力养成法*/
+#tab1-container{
+    position: relative;
+    padding-bottom: 50px;
+}
+.tab1-img{
+    width: 209px;
+    height: 209px;
+    margin: 50px auto;
+    display: inherit;
+}
+/*.tab1_icon{*/
+    /*transition: all 0.6s;*/
+/*}*/
+/*.tab1_icon:hover{*/
+    /*transform: scale(1.2);*/
+/*}*/
+
+.enlarge{
+    transition: all 0.6s;
+    transform: scale(1.2);
+}
+.enlarge_tit{
+    transition: all 0.6s;
+    transform: scale(1.1);
+}
+.enlarge_over{
+    transition: all 0.6s;
+    transform: scale(1.3);
+}
+/*.enlarge_tit{*/
+    /*transition: all 0.6s;*/
+    /*transform: scale(1.1);*/
+/*}*/
+
+.tab11{width: 70px;position: absolute;left: 100px;top: 150px;}
+.tab12{width: 70px;position: absolute;left: 230px;top: 150px;}
+.tab13{width: 70px;position: absolute;left: 280px;top: 235px;}
+.tab14{width: 60px;position: absolute;left: 230px;top: 330px;}
+.tab15{width: 60px;position: absolute;left: 110px;top: 330px;}
+.tab16{width: 70px;position: absolute;left: 45px;top: 235px;}
+
+.tab1_tit{font-size: 12px;color: #9FA0A0;}
+.tab1_tit1{width: 86px;position: absolute;left: 10px;top: 140px;}
+.tab1_tit2{width: 65px;position: absolute;left: 310px;top: 140px;}
+.tab1_tit3{width: 75px;position: absolute;left: 310px;top: 290px;}
+.tab1_tit4{width: 115px;position: absolute;left: 230px;top: 395px;}
+.tab1_tit5{width: 100px;position: absolute;left: 30px;top: 395px;}
+.tab1_tit6{width: 90px;position: absolute;left: 10px;top: 290px;}
+/*tab2区 -- 快乐家学*/
+.tab2{
+    background-color: #f3fdd4;
+    padding-bottom: 66px;
+}
+/*tab3区 -- 教育理念*/
+.tab3{
+    padding-bottom: 50px;
+}
+.tab3 .row{
+    margin-top: 30px;
+}
+.tab-h3{
+    text-align: center;
+    background-color: #f29a5b;
+    color: #fff;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 10px;
+}
+.tab3-avatar{
+    width: 100%;
+}
+.tab3-p{
+    margin-top: 10px;
+    text-indent:2em;
+}
+/*tab4区 -- 关于家学*/
+.tab4{
+    background-color: rgba(240,251,255,1);
+    border-top: 10px solid #c3e8fa;
+    border-bottom: 10px solid #c3e8fa;
+}
+.tab4-div{
+    text-indent: 2em;
+    line-height: 1.8;
+}
+
+/*tab5区 -- i家学*/
+.tab5{
+    background: url("../img/tab5bg.png") 100% center no-repeat;
+    background-size: 100% 100%;
+}
+.tab5-p{
+    text-indent: 2em;
+    font-size: 16px;
+    padding: 5px;
+    line-height: 2;
+}
+.tab5_p1{
+    margin-top: 70px;
+}
+.tab5-p2{
+
+}
+dd, dt{
+    line-height: 2.4;
+}
+.tab5-dl{
+    color: #0599D9;
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+
+.tab5 img{
+    display: inline-block;
+}
+
+.tab5_code{
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+}
+
+/*tab6区 -- 常见问题*/
+.tab6{
+    background-color: rgba(247,245,246,1);
+}
+#tab6-row{
+    padding: 40px;
+}
+.tab6-li{
+    list-style: none;
+
+}
+.tab6-h4{
+    /*background: url(../img/arrowDown.png) 98% center no-repeat;*/
+    font-size: 13px;
+    cursor: pointer;
+    border-bottom:1px solid #595757;
+    padding:5px 5px 15px 5px;
+}
+.tab6_img{
+    float: right;
+}
+
+.rotate{
+    -ms-transform:rotate(180deg); /* IE 9 */
+    -moz-transform:rotate(180deg); /* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari and Chrome */
+    -o-transform:rotate(180deg); /* Opera */
+}
+.tab6-p{
+    display: none;
+    font-size: 12px;
+    height: 100px;
+}
+
+/*address区*/
+.address{
+    background-color: #e5c264;
+    padding: 10px;
+}
+.address_container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    /*border: 1px solid red;*/
+}
+.address-h4{
+    color: #0599D9;
+    font-size: 18px;
+    text-align: center;
+}
+.address-p{
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+/*footer区*/
+#footer{
+    background-color: #504937;
+    color: #ffffff;
+    letter-spacing: 1px;
+    padding: 20px;
+    text-align: center;
+}
+.footer-p{
+    font-size: 12px;
+}
+
+/*右侧导航*/
+#nav_right{
+    /*border: 1px solid red;*/
+    display: none;
+    z-index: 3000;
+    position: fixed;
+    right: 5px;
+    top: 60px;
+}
+#nav_right img{
+    display: block;
+}
+.nav_line_frame{
+    /*border: 1px solid red;*/
+    position: absolute;
+    left: 16px;
+    top: 82px;
+}
+.line{
+    float: left;
+}
+.line_fr{
+    margin-left: 55px;
+}
+.nav_right_content{
+    width: 80px;
+    margin: 8px auto 0;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #51b6e4;
+    border-radius: 5px;
+}
+.tel_icon{
+    margin: 0 auto 5px;
+}
+#book_arrive{
+    width: 96%;
+    margin: 10px auto 0;
+    padding-bottom: 5px;
+    border: 2px solid #aed9ec;
+    background: #0293d2;
+}
+.plane_icon{
+    margin: 5px auto;
+}
+.nav_right_content figure{
+    font-size: 12px;
+    text-align: center;
+    color: #ffffff;
+}
+/*回到顶部*/
+#goTop{
+    display:none;
+    font-size: 12px;
+    width: 96%;
+    padding: 10px;
+    margin: 0 auto;
+    /*margin: 10px auto 0;*/
+    text-align: center;
+    color: #fff;
+    background: #0293d2;
+    cursor: pointer;
+    border: 2px solid #aed9ec;
+    border-top: none;
+}
+
+/*注册蒙板*/
+#register_mask{
+    background-color: rgba(233,246,254,1);
+    width: 100%;
+    z-index: 2000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+#register_mask .mask{
+    /*border: 1px solid red;*/
+    font-size: 14px;
+    padding: 15px 5px;
+    text-align: center;
+}
+.register_h4{
+    margin-top: 5px;
+    margin-left: 9px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+.register_fl{
+    float: left;
+    width: 50%;
+    /*border: 1px solid blue;*/
+}
+.inp{
+    width: 170px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.sex_lab{
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+#verify_frame{
+    margin-top: 23px;
+    margin-bottom: 0;
+}
+#verify_code{
+    width: 132px;
+    border-radius: 5px;
+    /*padding-left: 10px;*/
+}
+#code_btn{
+    background-color: #0293d2;
+    color: #ffffff;
+    width: 94px;
+    border: none;
+    text-align: center;
+    margin-left: -5px;
+}
+#code_btn:hover,#code_btn:active,#sumit_btn:hover,#sumit_btn:active{
+    background-color: #286090;
+}
+.register_h5{
+}
+.register_fr{
+    float: left;
+}
+.school_lab{
+    margin-left: 5px;
+    font-weight: 500;
+}
+#sumit_btn{
+    background-color: #0293d2;
+    color: #ffffff;
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    bottom: 8px;
+    left: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.submit_h5{
+    letter-spacing: 2px;
+    padding: 2px;
+    margin: 0;
+}
+#close_btn{
+    float: right;
+    font-size: 20px;
+    position: relative;
+    right: 95px;
+    bottom: 25px;
+    cursor: pointer;
+    color: #8dc2d3;
+}
+/*.close_rotate{*/
+    /*-ms-transform:rotate(360deg); /!* IE 9 *!/*/
+    /*-moz-transform:rotate(360deg); /!* Firefox *!/*/
+    /*-webkit-transform:rotate(360deg); /!* Safari and Chrome *!/*/
+    /*-o-transform:rotate(360deg); /!* Opera *!/*/
+/*}*/
+@media (min-width: 410px) {
+    /*tab1*/
+    #tab1-container{
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .tab1-img{
+        width: 239px;
+        height: 239px;
+    }
+    .tab11{width: 80px;position: absolute;left: 105px;top: 148px;}
+    .tab12{width: 80px;position: absolute;left: 250px;top: 148px;}
+    .tab13{width: 75px;position: absolute;left: 305px;top: 249px;}
+    .tab14{width: 65px;position: absolute;left: 248px;top: 360px;}
+    .tab15{width: 65px;position: absolute;left: 108px;top: 360px;}
+    .tab16{width: 80px;position: absolute;left: 35px;top: 249px;}
+
+    .tab1_tit{font-size: 12px;color: #9FA0A0;letter-spacing: 1px;}
+    .tab1_tit1{width: 85px;position: absolute;left: 15px;top: 140px;}
+    .tab1_tit2{width: 80px;position: absolute;left: 340px;top: 140px;}
+    .tab1_tit3{width: 100px;position: absolute;left: 338px;top: 310px;}
+    .tab1_tit4{width: 115px;position: absolute;left: 260px;top: 425px;}
+    .tab1_tit5{width: 110px;position: absolute;left: 30px;top: 425px;}
+    .tab1_tit6{width: 95px;position: absolute;left: 10px;top: 310px;}
+}
+@media (min-width: 450px) {
+    /*tab1*/
+    #tab1-container{
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .tab1-img{
+        width: 239px;
+        height: 239px;
+    }
+    .tab11{width: 80px;position: absolute;left: 120px;top: 148px;}
+    .tab12{width: 80px;position: absolute;left: 270px;top: 148px;}
+    .tab13{width: 75px;position: absolute;left: 330px;top: 249px;}
+    .tab14{width: 65px;position: absolute;left: 270px;top: 355px;}
+    .tab15{width: 65px;position: absolute;left: 135px;top: 355px;}
+    .tab16{width: 80px;position: absolute;left: 50px;top: 249px;}
+
+    .tab1_tit{font-size: 12px;color: #9FA0A0;letter-spacing: 1px;}
+    .tab1_tit1{width: 85px;position: absolute;left: 30px;top: 140px;}
+    .tab1_tit2{width: 80px;position: absolute;left: 360px;top: 140px;}
+    .tab1_tit3{width: 100px;position: absolute;left: 360px;top: 310px;}
+    .tab1_tit4{width: 115px;position: absolute;left: 285px;top: 425px;}
+    .tab1_tit5{width: 100px;position: absolute;left: 45px;top: 425px;}
+    .tab1_tit6{width: 95px;position: absolute;left: 10px;top: 310px;}
+}
+@media (min-width: 500px) {
+    /*tab1*/
+    #tab1-container{
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .tab1-img{
+        width: 259px;
+        height: 259px;
+    }
+    .tab11{width: 80px;position: absolute;left: 145px;top: 150px;}
+    .tab12{width: 80px;position: absolute;left: 315px;top: 150px;}
+    .tab13{width: 75px;position: absolute;left: 368px;top: 255px;}
+    .tab14{width: 70px;position: absolute;left: 300px;top: 375px;}
+    .tab15{width: 70px;position: absolute;left: 150px;top: 375px;}
+    .tab16{width: 80px;position: absolute;left: 75px;top: 255px;}
+
+    .tab1_tit{font-size: 12px;color: #9FA0A0;letter-spacing: 1px;}
+    .tab1_tit1{width: 95px;position: absolute;left: 60px;top: 140px;}
+    .tab1_tit2{width: 95px;position: absolute;left: 405px;top: 140px;}
+    .tab1_tit3{width: 80px;position: absolute;left: 400px;top: 320px;}
+    .tab1_tit4{width: 115px;position: absolute;left: 305px;top: 450px;}
+    .tab1_tit5{width: 85px;position: absolute;left: 70px;top: 450px;}
+    .tab1_tit6{width: 95px;position: absolute;left: 10px;top: 320px;}
+}
+
+@media (min-width: 550px) {
+    /*tab1*/
+    #tab1-container{
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .tab1-img{
+        width: 259px;
+        height: 259px;
+    }
+    .tab11{width: 80px;position: absolute;left: 155px;top: 150px;}
+    .tab12{width: 80px;position: absolute;left: 315px;top: 150px;}
+    .tab13{width: 75px;position: absolute;left: 375px;top: 258px;}
+    .tab14{width: 65px;position: absolute;left: 315px;top: 375px;}
+    .tab15{width: 70px;position: absolute;left: 170px;top: 375px;}
+    .tab16{width: 80px;position: absolute;left: 90px;top: 258px;}
+
+    .tab1_tit{font-size: 12px;color: #9FA0A0;letter-spacing: 1px;}
+    .tab1_tit1{width: 95px;position: absolute;left: 50px;top: 140px;}
+    .tab1_tit2{width: 100px;position: absolute;left: 410px;top: 140px;}
+    .tab1_tit3{width: 110px;position: absolute;left: 400px;top: 320px;}
+    .tab1_tit4{width: 115px;position: absolute;left: 325px;top: 450px;}
+    .tab1_tit5{width: 110px;position: absolute;left: 70px;top: 450px;}
+    .tab1_tit6{width: 95px;position: absolute;left: 10px;top: 320px;}
+}
+@media (min-width: 570px) {
+    /*tab1*/
+    #tab1-container{
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .tab1-img{
+        width: 259px;
+        height: 259px;
+    }
+    .tab11{width: 80px;position: absolute;left: 30%;top: 29%;}
+    .tab12{width: 80px;position: absolute;left: 57%;top: 29%;}
+    .tab13{width: 75px;position: absolute;left: 68%;top: 49%;}
+    .tab14{width: 65px;position: absolute;left: 57%;top: 72%;}
+    .tab15{width: 65px;position: absolute;left: 31%;top: 72%;}
+    .tab16{width: 80px;position: absolute;left: 17%;top: 49%;}
+
+    .tab1_tit{font-size: 12px;color: #9FA0A0;letter-spacing: 1px;}
+    .tab1_tit1{width: 95px;position: absolute;left: 11%;top: 27%;}
+    .tab1_tit2{width: 100px;position: absolute;left: 73%;top: 27%;}
+    .tab1_tit3{width: 110px;position: absolute;left: 73%;top: 61%;}
+    .tab1_tit4{width: 115px;position: absolute;left: 59%;top: 86%;}
+    .tab1_tit5{width: 110px;position: absolute;left: 15%;top: 86%;}
+    .tab1_tit6{width: 95px;position: absolute;left: 5%;top: 61%;}
+}
+@media (min-width: 620px) {
+    /*tab1*/
+    #tab1-container{
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .tab1-img{
+        width: 259px;
+        height: 259px;
+    }
+    .tab11{width: 80px;position: absolute;left: 32%;top: 29%;}
+    .tab12{width: 80px;position: absolute;left: 59%;top: 29%;}
+    .tab13{width: 75px;position: absolute;left: 66%;top: 49%;}
+    .tab14{width: 65px;position: absolute;left: 57%;top: 72%;}
+    .tab15{width: 65px;position: absolute;left: 34%;top: 72%;}
+    .tab16{width: 80px;position: absolute;left: 21%;top: 49%;}
+
+    .tab1_tit{font-size: 12px;color: #9FA0A0;letter-spacing: 1px;}
+    .tab1_tit1{width: 95px;position: absolute;left: 15%;top: 27%;}
+    .tab1_tit2{width: 100px;position: absolute;left: 73%;top: 27%;}
+    .tab1_tit3{width: 110px;position: absolute;left: 71%;top: 61%;}
+    .tab1_tit4{width: 115px;position: absolute;left: 59%;top: 86%;}
+    .tab1_tit5{width: 110px;position: absolute;left: 20%;top: 86%;}
+    .tab1_tit6{width: 95px;position: absolute;left: 8%;top: 61%;}
+}
+@media (min-width: 700px) {
+    /*tab1*/
+    #tab1-container{
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .tab1-img{
+        width: 259px;
+        height: 259px;
+    }
+    .tab11{width: 80px;position: absolute;left: 34%;top: 29%;}
+    .tab12{width: 80px;position: absolute;left: 56%;top: 29%;}
+    .tab13{width: 75px;position: absolute;left: 64%;top: 49%;}
+    .tab14{width: 65px;position: absolute;left: 56%;top: 72%;}
+    .tab15{width: 65px;position: absolute;left: 35%;top: 72%;}
+    .tab16{width: 80px;position: absolute;left: 24%;top: 49%;}
+
+    .tab1_tit{font-size: 12px;color: #9FA0A0;letter-spacing: 1px;}
+    .tab1_tit1{width: 95px;position: absolute;left: 18%;top: 27%;}
+    .tab1_tit2{width: 100px;position: absolute;left: 70%;top: 27%;}
+    .tab1_tit3{width: 110px;position: absolute;left: 71%;top: 61%;}
+    .tab1_tit4{width: 115px;position: absolute;left: 57%;top: 86%;}
+    .tab1_tit5{width: 110px;position: absolute;left: 22%;top: 86%;}
+    .tab1_tit6{width: 95px;position: absolute;left: 11%;top: 61%;}
+}
+/*小屏幕(平板,大于等于768px)*/
+@media (min-width: 768px) {
+    /*导航*/
+    .navbar_container{
+        width: 800px;
+    }
+    .navbar-nav{
+        margin-left: 0;
+        width: 75%;
+        background-color: transparent;
+        float: right;
+        text-align: center;
+    }
+    .logo_img{
+        width: 70%;
+        margin-top: 5px;
+    }
+
+    /*tab1*/
+    #tab1-container{
+        position: relative;
+        padding-bottom: 70px;
+    }
+    .tab1-img{
+        width: 335px;
+        height: 335px;
+    }
+    .tab11{width: 91px;position: absolute;left: 230px;top: 155px;}
+    .tab12{width: 91px;position: absolute;left: 430px;top: 155px;}
+    .tab13{width: 81px;position: absolute;left: 510px;top: 300px;}
+    .tab14{width: 69px;position: absolute;left: 435px;top: 450px;}
+    .tab15{width: 67px;position: absolute;left: 251px;top: 450px;}
+    .tab16{width: 83px;position: absolute;left: 155px;top: 300px;}
+
+    .tab1_tit{font-size: 13px;color: #9FA0A0;letter-spacing: 1px;}
+    .tab1_tit1{width: 170px;position: absolute;left: 50px;top: 160px;}
+    .tab1_tit2{width: 170px;position: absolute;left: 530px;top: 160px;}
+    .tab1_tit3{width: 145px;position: absolute;left: 535px;top: 375px;}
+    .tab1_tit4{width: 145px;position: absolute;left: 445px;top: 530px;}
+    .tab1_tit5{width: 115px;position: absolute;left: 150px;top: 530px;}
+    .tab1_tit6{width: 145px;position: absolute;left: 25px;top: 375px;}
+
+    .tab-h2{font-size: 24px;}
+    .tab-p{font-size: 16px;}
+
+    /*.tab6*/
+    .tab6-h4{font-size: 12px;font-weight: 800;}
+    .tab6-p{font-size: 12px;height: 90px;}
+
+    .address-h4{font-size: 22px;text-align: left;}
+    .address-p{font-size: 16px;}
+    .address_container{width: 670px;}
+    .footer-p{font-size: 13px;}
+}
+/*中等屏幕(桌面显示器，大于等于992px)*/
+@media (min-width: 992px) {
+    /*导航*/
+    .navbar_container{
+        padding-left: 96px;
+        width: 970px;
+    }
+    .navbar-nav{
+        /*margin-left: 40px;*/
+        width: 72%;
+        background-color: transparent;
+        float: right;
+        text-align: center;
+    }
+    .logo_img{
+        width: 70%;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+
+    /*tab1*/
+    #tab1-container{
+        position: relative;
+        padding-bottom: 100px;
+    }
+    .tab1-img{
+        width: 375px;
+        height: 375px;
+    }
+    .tab11{width: 102.75px;position: absolute;left: 325px;top: 165px;}
+    .tab12{width: 102px;position: absolute;left: 550px;top: 165px;}
+    .tab13{width: 91.5px;position: absolute;left: 635px;top: 320px;}
+    .tab14{width: 77.25px;position: absolute;left: 550px;top: 485px;}
+    .tab15{width: 75px;position: absolute;left: 350px;top: 485px;}
+    .tab16{width: 93.75px;position: absolute;left: 240px;top: 320px;}
+
+    .tab1_tit{font-size: 14px;color: #9FA0A0;}
+    .tab1_tit1{width: 170px;position: absolute;left: 130px;top: 170px;}
+    .tab1_tit2{width: 170px;position: absolute;left: 680px;top: 170px;}
+    .tab1_tit3{width: 143px;position: absolute;left: 670px;top: 400px;}
+    .tab1_tit4{width: 143px;position: absolute;left: 570px;top: 580px;}
+    .tab1_tit5{width: 115px;position: absolute;left: 245px;top: 580px;}
+    .tab1_tit6{width: 145px;position: absolute;left: 100px;top: 400px;}
+
+    .tab-h2{font-size: 28px;}
+    .tab-p{font-size: 17px;}
+
+    /*.tab6*/
+    .tab6-h4{font-size: 16px;}
+    .tab6-p{font-size: 13px;height: 70px;}
+
+    .address-h4{font-size: 26px;text-align: left;}
+    .address-p{font-size: 18px;}
+    .address_container{width: 750px;font-size: 18px;}
+    .footer-p{font-size: 14px;}
+}
+/*大屏幕(大桌面显示器，大于等于1200px)*/
+@media (min-width: 1200px) {
+    /*导航*/
+    .navbar_container{
+        padding-left: 160px;
+        width: 1170px;
+    }
+    .navbar-nav{
+        margin-right: 40px;
+        width: 65%;
+        background-color: transparent;
+        float: right;
+        text-align: center;
+    }
+    .logo_img{
+        width: 78%;
+        /*margin-top: 5px;*/
+        /*margin-left: -80px;*/
+    }
+    /*tab1*/
+    #tab1-container{
+        position: relative;
+        padding-bottom: 100px;
+    }
+    .tab1-img{
+        width: 400px;
+        height: 400px;
+    }
+    .tab11{width: 137px;position: absolute;left: 400px;top: 185px;}
+    .tab12{width: 132px;position: absolute;left: 645px;top: 185px;}
+    .tab13{width: 122px;position: absolute;left: 740px;top: 360px;}
+    .tab14{width: 103px;position: absolute;left: 645px;top: 535px;}
+    .tab15{width: 100px;position: absolute;left: 425px;top: 535px;}
+    .tab16{width: 125px;position: absolute;left: 300px;top: 360px;}
+
+    .tab1_tit{font-size: 15px;color: #9FA0A0;letter-spacing: 1px;}
+    .tab1_tit1{width: 195px;position: absolute;left: 180px;top: 200px;}
+    .tab1_tit2{width: 205px;position: absolute;left: 810px;top: 200px;}
+    .tab1_tit3{width: 165px;position: absolute;left: 810px;top: 470px;}
+    .tab1_tit4{width: 155px;position: absolute;left: 690px;top: 655px;}
+    .tab1_tit5{width: 130px;position: absolute;left: 315px;top: 655px;}
+    .tab1_tit6{width: 160px;position: absolute;left: 160px;top: 460px;}
+
+    .tab-h2{font-size: 36px;}
+    .tab-p{font-size: 18px;}
+
+    /*.tab6*/
+    .tab6-p{font-size: 14px;height: 70px;}
+    .address-h4{font-size: 28px;text-align: left;}
+    .address-p{font-size: 20px;}
+    .address_container{width: 950px;font-size: 20px;}
+    .footer-p{font-size: 15px;}
+}
+

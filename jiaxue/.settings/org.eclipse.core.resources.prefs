@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/pages/login.jsp=UTF-8
+encoding//src/com/jiaxue/bean/Drug.java=UTF-8
+encoding//src/com/jiaxue/bean/DrugService.java=UTF-8
+encoding//src/com/jiaxue/bean/Label.java=UTF-8
+encoding//src/com/jiaxue/bean/UserDrug.java=UTF-8
+encoding//src/com/jiaxue/bean/UserLabel.java=UTF-8
+encoding//src/com/jiaxue/controller/AdminUserController.java=UTF-8
+encoding//src/com/jiaxue/util/MD5Utils.java=UTF-8
+encoding//src/com/jiaxue/util/PictureUtil.java=UTF-8
+encoding//src/com/jiaxue/util/VideoUtil.java=UTF-8
+encoding//src/com/jiaxue/util/jiaxueUtil.java=UTF-8
+encoding//src/com/jiaxue/wechat/handler/DrugMessageHandler.java=UTF-8
+encoding//src/com/jiaxue/wechat/handler/HealthMessageHandler.java=UTF-8
+encoding//src/com/jiaxue/wechat/handler/ScanCodeMessageHandler.java=UTF-8
+encoding//src/com/jiaxue/wechat/handler/TextMessageHandler.java=UTF-8
+encoding/<project>=UTF-8

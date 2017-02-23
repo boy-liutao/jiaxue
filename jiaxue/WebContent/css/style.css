@@ -1,0 +1,372 @@
+@charset "utf-8";
+/*html { overflow-y: hidden; }*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-weight:normal;
+}
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft Yahei","SIMHei","\5b8b\4f53",simsun,sans-serif;
+    color:#595757;
+    overflow-x: hidden;
+    font-size: 0.3733rem;
+}
+ul,ol{
+    list-style: outside none none;
+}
+input[type="text"],input[type="number"],input[type="password"],input[type="submit"],input[type="button"],textarea {
+    -webkit-appearance: none;
+    outline-style: none;
+    resize: none;
+    /*border:1px solid #9FA0A0;*/
+    border: none;
+    width: 6.48rem;
+    height: 0.8533rem;
+}
+button{
+    outline-style: none;
+    border: none;
+    background: #0099d9;
+    color: #FFFFff;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #9FA0A0;
+}
+a:active{
+    color: #0099d9;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+div,figure,figcaption,ul{
+    box-sizing: border-box;
+}
+strong{
+    color: #0099d9;
+    font-size: 0.42rem;
+}
+hr{
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+    height: 0.05rem;
+    background: #efefef;
+}
+.none{
+    display: none
+}
+.clearfix{content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+
+/*首页*/
+/*#adver_inner{width:50rem;height:4.7067rem;position:absolute;top:0;left:0;}*/
+/*#adver_inner .adver{width:10rem;height:4.7067rem;float: left;}*/
+/*#adver_btn{position:absolute;bottom:0.15rem;right:3.5rem;overflow:hidden;height:0.3rem;width:2.5rem;}*/
+/*#adver_btn li{width:0.25rem;height:0.25rem;margin-left:0.1rem;float:left;line-height:0.25rem;border:1px solid white;cursor:pointer;-webkit-user-select:none;}*/
+/*.adver_current{background: #FFFFff;}*/
+/*首页*/
+#index_wrap{width: 10rem;height: 17.7867rem;background:#efefef;}
+#adver_outer{width: 10rem;height: 4.7067rem;position:relative;overflow: hidden;}
+#director{width:10rem;}
+#director .dir_floor{margin-bottom: 0.04rem}
+#director .dir_fl{width: 49.8%;height: 2.6667rem;float: left;background:#ffffff;}
+#director .dir_fr{width: 49.8%;height: 2.6667rem;float: right;background:#ffffff;}
+#director figure{width: 2rem;margin: 0.6667rem auto;text-align: center}
+#director figure img{margin: 0 auto;}
+#director figure figcaption{font-size: 0.42rem;}
+#director figure figcaption.fig1{margin-top: 0.19rem;}
+#director figure figcaption.fig2{margin-top: 0.2933rem;}
+#director figure figcaption.fig3{margin-top: 0.32rem;}
+#director figure figcaption.fig4{margin-top: 0.24rem;}
+#director figure figcaption.fig5{margin-top: 0.2933rem;}
+#director figure figcaption.fig6{margin-top: 0.2933rem;color: #9FA0A0;}
+#director .dir1 .unread_icon{width: 0.4rem;height: 0.4rem;border-radius: 50%;background: red;display: inline-block;position: absolute;left: 3.1rem;top: 5.4rem;}
+#director .dir2 .unread_icon{width: 0.4rem;height: 0.4rem;border-radius: 50%;background: red;display: inline-block;position: absolute;left: 8.1rem;top: 5.4rem;}
+
+/* 首页 -- 教师端 */
+#director .tdir_fl{width: 46%;height: 2.4rem;margin-left:0.24rem;margin-top:0.24rem;float: left;color:#fff;}
+#director .tdir_fr{width: 46%;height: 2.4rem;margin-right:0.24rem;margin-top:0.24rem;float: right;color:#fff;}
+#director .tdir1{background:#1c9ad5;}
+#director .tdir2{background:#90c132;}
+#director .tdir3{background:#b97aaf;}
+#director .tdir4{background:#ea6d5b;}
+#director .tdir5{background:#f4a250;}
+#director .tdir6{background:#fccf2e;}
+#director figure figcaption.fig1{margin-top: 0.19rem;}
+#director figure figcaption.fig2{margin-top: 0.115rem;}
+#director figure figcaption.fig3{margin-top: 0.22rem;}
+#director figure figcaption.fig4{margin-top: 0.26rem;}
+#director figure figcaption.fig5{margin-top: 0.2933rem;}
+#director figure figcaption.fig6{margin-top: 0.2933rem;color: #fff;}
+#director .tindex_logo{width:2.8rem;height:0.7733rem;margin-left:3.6rem;margin-top:2.333rem;}
+#director .tdir1 .unread_icon{width: 0.4rem;height: 0.4rem;border-radius: 50%;background: red;display: inline-block;position: absolute;left: 3.1rem;top: 5.4rem;}
+#director .tdir2 .finish{width:0.92rem;height:0.92rem;position:absolute;left:8.8rem;top:5rem;}
+#director .tdir3 .finish{width:0.92rem;height:0.92rem;position:absolute;left:3.9rem;top:7.7rem;}
+
+/*登录页(绑定账号)*/
+#login_wrap{width: 10rem;height: 17.7867rem;background: #efefef;}
+#login_header{width: 10rem;height: 3.2267rem;font-size: 0.3733rem;margin:0 auto;}
+#login_header .login_hg{margin: 1.0667rem auto;text-align: center;}
+#login_header h2{padding-bottom: 0.1rem;}
+#login_tel{width: 8.9333rem;margin: 0 auto 0.5333rem;}
+#login_tel img{margin-top: 0.21rem;padding-left: 0.05rem;}
+.login_item{float: left;}
+#login_tel div.login_item{margin-left: 0.4rem;}
+#login_tel div.login_item span{color: #0099d9;}
+#login_tel input{margin-left: 0.32rem;}
+#login_validate{width: 8.9333rem;height: 1.1rem;line-height: 1.1rem;margin: 0 auto;}
+#login_validate img{margin-top: 0.21rem;}
+#login_validate div.login_item{margin-left: 0.3433rem;}
+#login_validate div.login_item span{color: #0099d9;}
+#login_validate input{width: 4.0533rem;margin-left: 0.32rem;}
+#login_validate .code{position: relative;float: right;right: 0.2rem;color: #0099d9;}
+#register_frame{width: 9.2267rem;height: 0.8133rem;margin: 0 auto;}
+#register_frame .register_btn,.teacher_register_btn{width: 9.2267rem;height: 0.8133rem;margin: 1.2267rem auto;border: none;background: #0099d9;color: #FFFFff;font-size: 0.42rem;}
+
+
+/*登录页(绑定账号)——教师端*/
+#loginT_wrap{width: 10rem;height: 17.7867rem;background: #fff;padding-top: 3.28rem}
+#loginT_tel{width: 7.5467rem;height:0.9333rem;margin: 0 auto 0.32rem;background: #efefef;border-radius: 0.2rem;}
+#loginT_tel img{margin-top: 0.1467rem;margin-left:0.36rem;}
+#loginT_tel div.login_item{margin-left: 0.32rem;}
+#loginT_tel div.login_item span{color: #0099d9;vertical-align: middle}
+#loginT_tel input{width:4.48rem;height:0.9333rem;background:#efefef;margin-left: 0.32rem;vertical-align: middle}
+
+#loginT_validate{width: 7.5467rem;height: 0.9333rem;line-height: 1.0333rem;margin: 0 auto;background: #efefef;border-radius: 0.2rem;box-sizing: border-box;}
+#loginT_validate img{margin-top: 0.1267rem;margin-left: 0.2933rem;}
+#loginT_validate div.login_item{margin-left: 0.3073rem;}
+#loginT_validate div.login_item span{color: #0099d9;}
+#loginT_validate input{width: 2.5rem;margin-left: 0.32rem;height: 0.7333rem;background: #efefef;}
+#loginT_validate .code{width:2.3333rem;height:0.9333rem;line-height:1.0333rem;text-align:center;float: right;background:#ffffff;color: #0099d9;border:1px solid #efefef;border-top-right-radius: 0.2rem;border-bottom-right-radius: 0.2rem;}
+#registerT_frame{width: 7.5467rem;height: 0.8133rem;margin: 0 auto;}
+#registerT_frame .register_btn,.teacher_register_btn{width: 7.5467rem;height: 0.8133rem;margin: 1rem auto;border: none;background: #0099d9;color: #FFFFff;font-size: 0.42rem;border-radius: 0.2rem;}
+
+
+#bind_failed{width: 10rem;height: 17.7867rem;background-color: rgba(0,0,0,0.4);position: absolute;left: 0;top: 0;z-index: 1000}
+#bind_failed .bind_failed_popup{width: 6.5333rem;height: 3.44rem;margin: 6.08rem auto 0;border-radius: 0.2rem;background-color: #FFFFff;padding-top: 0.64rem}
+#bind_failed .bind_failed_popup h5{text-align: center;letter-spacing: 0.02rem}
+#bind_failed .bind_failed_popup h5.tit2{margin-top: 0.24rem;margin-bottom: 0.7067rem;}
+#bind_failed .bind_failed_popup h5.bind_failed_btn{margin-top: 0.15rem;color: #0099d9;}
+
+/*i家学——教师版*/
+#teacher_wrap{width: 10rem;height: 17.7867rem;}
+#teacher_header{width: 100%;height:1.3rem;line-height:1.24rem;background: #efefef;position: relative}
+#teacher_header .initial_search_inp{width: 8rem;height:0.8133rem;position:absolute;left:0.4rem;top:0.2rem;border: 1px solid lightgrey;text-align: center;}
+#teacher_search_btn{float: right;background: #efefef;border: none;color: #9FA0A0;margin-right: 0.4rem;margin-top: 0.4rem;font-size: 0.42rem}
+
+#search_content{width: 9.2rem;height:16.4867rem;margin: 0 auto;font-size:0.42rem;overflow: auto;}
+#search_content .history_search{width: 9.2rem;margin-top: 2.0533rem;}
+#search_content .history_search .history_tit{margin-left: 0.1rem}
+#search_content .history_search .histroy_clear{float: right;color: #0099d9;margin-right: 0.1rem}
+#search_content .history_search button{background-color: #9FA0A0;font-size: 0.42rem;padding: 0.1rem 0.3rem;border-radius: 0.5rem;margin: 0.1rem;}
+
+#teacher_nav{width: 10rem;height: 16.4867rem;overflow: auto;}
+#teacher_nav .teacher_nav_header{width: 10rem;z-index: 9999;letter-spacing: 0.05rem}
+#teacher_nav .teacher_nav_header div{width: 50%;float: left;height: 0.8133rem;line-height:0.8133rem;border: 1px solid lightgrey;border-left: none;}
+#teacher_nav .teacher_nav_header figcaption{float: left;margin-left: 1.44rem;}
+#teacher_nav .teacher_nav_header img{float:left;width: 0.4267rem;height: 0.24rem;display: inline-block;margin-top: 0.3rem;margin-left: 0.1rem}
+#teacher_nav .teacher_nav_header .teacher_nav_class{border-right: none}
+
+#teacher_select_mask{width:10rem;height:15.6734rem;position:absolute;left:0;top:2.1133rem;background-color: rgba(0,0,0,0.4);z-index: 9999;}
+#teacher_select_mask ul{display: block;float: left;width: 50%;background: #FFFFff;letter-spacing: 0.05rem}
+#teacher_select_mask .mask_select_school li{height: 0.8133rem;line-height: 0.8133rem;padding-left: 1.44rem;border-right: 1px solid lightgrey;border-bottom: 1px solid lightgrey;}
+#teacher_select_mask .mask_select_school li:active{background: #0099d9;color: #FFFFff;}
+#teacher_select_mask .mask_select_class{display: block;float: right;width: 50%;background: #FFFFff}
+#teacher_select_mask .mask_select_class li{height: 0.8133rem;line-height: 0.8133rem;padding-left: 1.44rem;border-bottom: 1px solid lightgrey;}
+#teacher_select_mask .mask_select_class li:active{background: #0099d9;color: #FFFFff;}
+
+#teacher_babySign_mask{width: 10rem;height: 17.7867rem;background-color: rgba(0,0,0,0.4);position: absolute;left: 0;top: 0;z-index: 9999}
+#teacher_babySign_mask .babySign_content{width: 10rem;height:13.0934rem;margin-top: 4.6933rem;background: #FFFFff;}
+#teacher_babySign_mask .babySign_content .babySign_content_header{background: #efefef;padding: 0.4rem;border-bottom: 0.05rem solid lightgrey}
+#teacher_babySign_mask .babySign_content .babySign_content_header strong{font-size: 0.42rem;letter-spacing: 0.02rem;}
+#teacher_babySign_mask .babySign_content .babySign_content_header span{margin-left: 0.32rem;color: #9FA0A0;letter-spacing: 0.02rem;}
+#teacher_babySign_mask .babySign_content .babySign_content_center{height:10.5733rem;overflow: auto}
+#teacher_babySign_mask .babySign_content .babySign_content_center li{padding: 0.48rem 0.4rem;border-bottom: 0.05rem solid lightgrey;word-wrap: break-word;word-break: break-all;}
+#teacher_babySign_mask .babySign_content .babySign_content_footer {z-index:99999;width:10rem;background: #ffffff;;position:fixed;bottom:0;left:0;padding-top: 0.15rem;padding-bottom: 0.15rem;}
+#teacher_babySign_mask .babySign_content .babySign_content_footer .babySign_inp{width: 7.7867rem;height: 0.8133rem;background:#efefef;border:1px solid lightgrey;margin-left: 0.4rem;padding-left: 0.2rem;}
+#teacher_babySign_mask .babySign_content .babySign_content_footer .babysign_next_btn{color: #82c1ea;position:relative;top:0.05rem;left:0.05rem;font-size: 0.42rem}
+.changefontColor{color: #82c1ea;}
+
+.teacher_content{width: 9.2rem;height:15.6734rem;margin:0 auto 4rem;overflow: auto;}
+.teacher_content .teacher_content_block{width: 9.2rem;border-bottom:0.05rem solid lightgrey;}
+.teacher_content .teacher_content_block img{width: 1.6267rem;height: 1.6267rem;float: left;margin-top: 0.4rem;margin-bottom: 0.4rem;}
+.teacher_content .teacher_content_block .unread_icon{width: 0.4rem;height: 0.4rem;border-radius: 50%;background: #0099d9;float: left;z-index: 10;margin-top: 0.2rem;margin-left: -0.2rem;}
+.teacher_content .teacher_content_block .teacher_block_fr{float: left;margin-left: 0.32rem;margin-top: 0.46rem;}
+.teacher_content .teacher_content_block .teacher_block_fr h2{font-size: 0.42rem;font-weight: 600;}
+.teacher_content .teacher_content_block .teacher_block_fr h4{font-size: 0.28rem;color: #9FA0A0;margin-top: 0.05rem}
+.teacher_content .teacher_content_block .teacher_block_fr h5{font-size: 0.28rem;color: lightgrey;margin-top: 0.05rem}
+.teacher_content .teacher_content_block button{font-size: 0.42rem;width: 2.2267rem;height: 0.8133rem;float: right;margin-top: 0.8133rem;}
+#teacher_footer{width:9.2rem;height:2rem;margin-left: 0.4rem;padding-top:0.4rem;text-align:center;position:absolute;bottom:0rem;font-size: 0.3733rem;background: #FFFFff;color: #9FA0A0;z-index: 1000;}
+#teacher_footer h5{padding: 0.05rem}
+
+#teacher_hide_mask{width: 10rem;height: 0.5333rem;position: fixed;bottom: 0;left: 0;z-index: 9999;}
+
+#teacher_foot_mask{width: 10rem;height: 2.8rem;background-color: rgba(0,0,0,0.4);position:absolute;bottom:0;z-index: 9999}
+#teacher_foot_mask .teacher_myavatar{width: 2.08rem;height: 2.08rem;margin-left:0.3733rem;margin-top:0.2rem;float:left;border-radius: 50%;border: 1px solid lightgrey;}
+#teacher_foot_mask .foot_mask_fr{float: left;margin-left:0.7rem;margin-top:0.3rem;}
+#teacher_foot_mask .foot_mask_fr h4{color: #FFFFff;font-size: 0.28rem;}
+#teacher_foot_mask .foot_mask_fr h5{color: #EEEEEE;font-size: 0.24rem;margin-top: 0.15rem;}
+#teacher_foot_mask .foot_mask_fr button{width:2.4rem;height:0.5867rem;font-size: 0.28rem;margin-top: 0.3rem;border:1px solid lightgrey;border-radius: 0.2rem;background-color: rgba(133,133,133,0.5);letter-spacing: 0.01rem}
+#teacher_foot_mask .foot_mask_fr button.teacher_unbind{margin-left: 0.96rem;}
+
+#babySign_uppic_mask{width: 10rem;height: 17.7867rem;background-color:rgba(0,0,0,0.4);position: absolute;left: 0;top: 0;z-index: 9999;}
+#babySign_uppic_mask .uppic_popup{width: 6.5867rem;height: 5.3867rem;background: #FFFFff;margin: 7.3867rem auto 0;border-radius: 0.2rem;padding-top: 0.48rem}
+#babySign_uppic_mask .uppic_popup h2{margin:0 auto;width:5.3601rem;font-size: 0.42rem;text-align: center;letter-spacing:0.02rem;overflow: hidden;word-break: break-all;word-wrap: break-word;}
+#babySign_uppic_mask .uppic_popup figure{float: left;margin-top: 0.6133rem;margin-bottom:0.64rem;width: 100%;text-align: center}
+#babySign_uppic_mask .uppic_popup figure img{margin: 0 auto}
+#babySign_uppic_mask .uppic_popup .babySign_btn{border-bottom-left-radius:0.2rem;border-bottom-right-radius:0.2rem;font-size: 0.42rem; width:100%;height: 1.0667rem;line-height:1.0667rem;text-align:center;background-color:#ffffff;color:#0099d9;letter-spacing: 0.05rem;}
+
+#unbind_whether_mask{width: 10rem;height: 17.7867rem;background-color: rgba(0,0,0,0.4);position: absolute;left: 0;top: 0;z-index: 99999}
+#unbind_whether_mask .unbind_prompt{width: 6.5333rem;height: 3.44rem;margin: 6.08rem auto 0;border-radius: 0.2rem;background-color: #FFFFff;padding-top: 0.64rem;color: #9FA0A0}
+#unbind_whether_mask .unbind_prompt h5{text-align: center;letter-spacing: 0.02rem}
+#unbind_whether_mask .unbind_prompt h5.tit2{margin-top: 0.24rem;margin-bottom: 0.6rem;}
+#unbind_whether_mask .unbind_prompt .unbind_prompt_confirm h5{box-sizing: border-box;float: left;width: 50%;margin-top: 0.2rem;letter-spacing: 0.02rem}
+#unbind_whether_mask .unbind_prompt .unbind_prompt_confirm h5.unbind_continue{color: #82c1ea;border-left: 0.03rem solid lightgrey;}
+
+
+/* 教师端 -- 家学家话 */
+#theader{width: 100%;height:1.24rem;line-height:1.24rem;background: #efefef;position: relative}
+#theader .initial_search_inp{width: 4.4rem;height:0.8133rem;position:absolute;left:0.4rem;top:0.2rem;border: 1px solid lightgrey;border-radius:0.4rem;padding-left:3.6rem;}
+#theader .search_icon{width: 0.32rem;height: 0.32rem;display: inline-block;position: absolute;left: 3.5rem;top: 0.482rem;}
+#theader .refresh_btn{width:0.4667rem;height:0.56rem;float: right;background: #efefef;border: none;color: #9FA0A0;margin-right: 0.6rem;margin-top: 0.38rem;font-size: 0.42rem}
+
+#teacher_nav{width: 10rem;height: 16.4867rem;overflow: auto;}
+#teacher_nav .teacher_nav_header{width: 10rem;z-index: 9999;letter-spacing: 0.05rem}
+#teacher_nav .teacher_nav_header .teacher_nav_school{color: #0099d9;border-bottom:3px solid #0099d9;}
+#teacher_nav .teacher_nav_header .teacher_nav_class{color: #eb5837;border-bottom:3px solid #eb5837;}
+#teacher_nav .teacher_nav_header div{width: 50%;float: left;height: 1.24rem;line-height:1.24rem;border: 1px solid lightgrey;border-left: none;}
+#teacher_nav .teacher_nav_header figcaption{float: left;margin-left:0.2rem;}
+#teacher_nav .teacher_nav_header img{float:left;width: 0.1733rem;height: 0.1733rem;display: inline-block;margin-top: 0.5rem;margin-left: 1.44rem;}
+#teacher_nav .teacher_nav_header .teacher_nav_class{border-right: none}
+
+#teacher_select_mask{width:10rem;height:15.3467rem;position:absolute;left:0;top:2.44rem;background-color: rgba(0,0,0,0.4);z-index: 9999;}
+#teacher_select_mask ul{display: block;float: left;width: 50%;background: #FFFFff;letter-spacing: 0.05rem}
+#teacher_select_mask .mask_select_school li{height: 0.8133rem;line-height: 0.8133rem;padding-left: 1.44rem;border-right: 1px solid lightgrey;border-bottom: 1px solid lightgrey;}
+#teacher_select_mask .mask_select_school li:active{background: #0099d9;color: #FFFFff;}
+#teacher_select_mask .mask_select_class{display: block;float: right;width: 50%;background: #FFFFff}
+#teacher_select_mask .mask_select_class li{height: 0.8133rem;line-height: 0.8133rem;padding-left: 1.44rem;border-bottom: 1px solid lightgrey;}
+#teacher_select_mask .mask_select_class li:active{background: #0099d9;color: #FFFFff;}
+
+
+
+/*编辑资料*/
+#edit_wrap {width: 10rem;height: 17.7867rem;overflow: auto}
+#edit_header{width: 9.2rem;margin: 0 auto;}
+#edit_header h2{float: left;margin-top: 0.64rem;color: #0099d9;font-size: 0.42rem;font-weight: 600}
+#edit_header h5{float: left;margin-top: 0.68rem;margin-left: 0.5333rem;font-size: 0.42rem;}
+#edit_header .edit_unbind{float: right;width: 2.4267rem;height: 0.8133rem;line-height: 0.8133rem;background: #0099d9;color: #FFFFff;text-align: center;letter-spacing: 0.05rem;margin-top: 0.5rem;margin-bottom: 0.5rem}
+#edit_avatar{width: 10rem;border-bottom: 0.05rem solid lightgrey;}
+#edit_avatar .imgContainer{width: 2.16rem;height: 2.16rem;float: left;border: 1px solid #efefef;border-radius: 50%;overflow: hidden;margin-left: 0.8rem;margin-top: 0.24rem;margin-bottom: 0.24rem}
+#edit_avatar .avatar{width: 2.16rem;height: 2.16rem;}
+#edit_avatar .update_avatar{float: right;width: 2.4267rem;height: 0.8133rem;line-height: 0.8133rem;background: #0099d9;color: #FFFFff;text-align: center;letter-spacing: 0.05rem;margin-right: 0.4rem;margin-top: 0.9067rem}
+#edit_content{width: 9.2rem;margin: 0 auto;}
+#edit_content .parent_info{margin-bottom: 0.1333rem;}
+#edit_content .edit_fl_tit{float: left;width: 2rem;font-size:0.42rem;margin-top: 0.2933rem}
+#edit_content .edit_fr_inp{float: left;margin-top: 0.2rem;}
+#edit_content .edit_fr_inp .parent_info_name,
+                           .parent_info_number,
+                           .parent_info_email,
+                           .parent_info_address,
+                           .child_info_name,
+                           .child_info_school,
+                           .child_info_birthday{float: left;background: #efefef;box-sizing: border-box;}
+#edit_content .parent_info_bottom{margin-bottom: 0.4667rem}
+#edit_content .child_info{margin-bottom: 0.1333rem;}
+#edit_content .edit_fr_inp .male_radio_img{margin-left: 0.96rem;margin-top:0.28rem;display: inline-block;}
+#edit_content .edit_fr_inp .male,.female{margin-left: 0.4rem;position: relative;bottom: 0.04rem;font-size: 0.42rem;color: grey}
+#edit_content .edit_fr_inp .female_radio_img{margin-left: 1.2rem;display: inline-block;}
+#edit_content .edit_fr_grade{float: left;width: 7.2rem;margin-top: 0.35rem;}
+#edit_content .edit_fr_grade .grade{width: 2.2567rem;height: 0.8133rem;line-height: 0.8133rem;box-sizing: border-box;background: #FFFFff;color: #9FA0A0;border: 1px solid #9FA0A0;float: left;text-align: center;}
+#edit_content .edit_fr_grade .grade2,.grade3,.grade5,.grade6{margin-left: 0.2rem;}
+#edit_content .edit_fr_grade .grade4,.grade5,.grade6{margin-top: 0.2133rem;}
+#edit_content .edit_fr_inp img.calendar_icon{width: 0.6533rem;height: 0.56rem;float: right;display: inline-block;position: relative;bottom: 0.7rem;right: 0.15rem}
+#edit_btn{width: 10rem;height: 1.2133rem;line-height: 1.2133rem;margin-top: 0.3733rem;font-size: 0.48rem;background: #0099d9;color: #FFFFff;text-align: center;}
+
+#editinfo_avatar_mask{width: 10rem;height: 18.7867rem;background: #000000;opacity: 0.4;position: absolute;left: 0;top: 0;z-index: 100;}
+#avatar_popup_mask{width: 10rem;height: 18.7867rem;;position: absolute;left: 0;top: 0;z-index: 200;}
+#avatar_popup_mask .avatar_popup{width: 6.5867rem;height: 3.44rem;background: #FFFFff;z-index: 200;opacity: 1;margin: 7.3867rem auto 0;border-radius: 0.2rem;padding-top: 0.48rem}
+#avatar_popup_mask .avatar_popup h2{color: #0099d9;font-size: 0.42rem;font-weight: 500;text-align: center;}
+#avatar_popup_mask .avatar_popup figure{float: left;margin-top: 0.6133rem;width: 50%;text-align: center}
+#avatar_popup_mask .avatar_popup figure img{margin: 0 auto}
+#avatar_popup_mask .avatar_popup figure figcaption{color: #595757;}
+#avatar_popup_mask .avatar_popup figure figcaption.tit1{margin-top: 0.2267rem}
+#avatar_popup_mask .avatar_popup figure figcaption.tit2{margin-top: 0.3067rem}
+/*background-color:rgba(255, 255, 255, 0.4)*/
+
+#unbind_popup_mask{width: 10rem;height: 18.7867rem;;position: absolute;left: 0;top: 0;z-index: 200;}
+#unbind_popup{width: 6.5867rem;height: 3.44rem;line-height:3.44rem;text-align:center;background-color:rgba(0, 0, 0, 0.6);margin: 7.3867rem auto 0;border-radius: 0.2rem;}
+#unbind_popup span{z-index: 300;color: #FFFFff;font-size: 0.42rem;letter-spacing: 0.05rem;}
+
+/*我的评论(老师端)*/
+#mcteacher_wrap{width: 10rem;height: 17.7867rem;background: #efefef;overflow: auto;}
+#mcteacher_wrap .baby_section{width: 10rem;}
+#mcteacher_wrap .baby_section header{width: 9.2rem;margin: 0 auto;}
+#mcteacher_wrap .baby_section header h5{font-size: 0.3rem;text-align: center;color: #9FA0A0;margin-top:0.4rem;margin-bottom:0.4rem;}
+#mcteacher_wrap article{background: #e6e6e6;width: 9.2rem;margin: 0 auto;}
+#mcteacher_wrap .baby_section .signed_message{float: left;width: 3.5733rem;margin-left: 0.3rem;margin-top: 0.5333rem;word-break: break-all;word-wrap: break-word;}
+#mcteacher_wrap .baby_section .signed_message strong{font-size: 0.48rem}
+#mcteacher_wrap .baby_section .signed_message p{margin-top: 0.5rem;margin-bottom: 0.5867rem;color: #9FA0A0;letter-spacing: 0.01rem}
+#mcteacher_wrap .baby_section .signed_img{float: left;width: 4.0533rem;height: 2.2533rem;margin-left: 0.9067rem;margin-top: 0.48rem;margin-bottom:0.48rem;overflow: hidden}
+#baby_mask{width: 10rem;height: 17.7867rem;background-color: rgba(0,0,0,1);position: absolute;left: 0;top: 0;display: none;z-index: 99999;}
+#baby_mask img{width: 10rem;}
+.enlarge{-webkit-box-align: center;}
+
+#mcteacher_wrap .mcteacher_stu_comment{width: 9.2rem;margin: 0 auto;}
+#mcteacher_wrap .mcteacher_stu_comment h5{font-size: smaller;text-align: center;color: lightgrey;margin-top:0.5837rem;margin-bottom:0.5837rem;}
+#mcteacher_wrap .mcteacher_stu_comment li{margin-bottom:0.3733rem;}
+.teacher_avatar{width: 0.9867rem;height: 0.9867rem;float: right;}
+#mcteacher_wrap .mcteacher_stu_comment img.teacher_message_img{width: 3.28rem;height: 2.16rem;float: right;margin-right: 0.3467rem}
+.teacher_chat_arrow{float: right;position: relative;top: 0.3rem;right: 0.1rem;}
+.teacher_message_tit{float: right;margin-right: 0.08rem;margin-bottom: 0.2rem;padding:0.32rem;font-size:0.4rem;color:#ffffff;backgroud:#31a5fa;background-color:#31a5fa;border-radius: 0.2rem;max-width: 5.7333rem;word-wrap: break-word;word-break: break-all;}
+
+#mcteacher_wrap .mcteacher_teacher_content{width: 9.2rem;margin: 0.56rem auto 1.5rem;background-color: #efefef;}
+#mcteacher_wrap .mcteacher_teacher_content h5{font-size: smaller;text-align: center;color: lightgrey;margin-bottom:0.5867rem;}
+.immediately_time{display: none;}
+
+/*mcteacher_footer*/
+#mcteacher_footer{width: 10rem;height: 1.2133rem;border-top: 0.05rem solid lightgrey;border-bottom: 0.05rem solid lightgrey;position: fixed;bottom: 0;z-index: 1000;background: #FFFFff;}
+#mcteacher_footer img{width: 0.64rem;height: 0.52rem;display: inline-block;margin-top:0.3466rem;float: left;}
+#mcteacher_footer img.photo{margin-left: 0.4rem;}
+/* #mcteacher_footer img.camera{margin-left: 0.2rem;} */
+#mcteacher_footer .teacher_mymessage{width: 7rem;height: 0.4867rem;margin-top: 0.1633rem;margin-left:0.3rem;padding:0.2rem; float: left;border: 0.04rem solid lightgrey;background: #efefef;font-size: 0.4rem;}
+#mcteacher_footer .send{float: left;margin-top: 0.34rem;margin-left:0.2rem;font-size: 0.4rem}
+
+/*#mcteacher_wrap footer{width: 10rem;height: 1.2133rem;border-top: 0.01rem solid lightgrey;position: fixed;bottom: 0;z-index: 1000;background: #FFFFff;}*/
+/*#mcteacher_wrap footer img{width: 0.64rem;height: 0.52rem;display: inline-block;margin-top:0.3466rem;float: left;}*/
+/*#mcteacher_wrap footer img.photo{margin-left: 0.2rem;}*/
+/*#mcteacher_wrap footer img.camera{margin-left: 0.2rem;}*/
+/*#mcteacher_wrap footer .teacher_mymessage{width: 6.4rem;height: 0.4867rem;margin-top: 0.1633rem;margin-left:0.2rem;padding:0.2rem; float: left;border: 0.01rem solid lightgrey;background: #efefef;font-size: 0.4rem;}*/
+/*#mcteacher_wrap footer .send{float: left;margin-top: 0.34rem;margin-left:0.2rem;font-size: 0.4rem}*/
+
+.myavatar_teacher{width: 0.9867rem;height: 0.9867rem;margin-bottom: 0.3733rem;float: left;}
+.student_chat_arrow{float: left;position: relative;top: 0.3rem;left: 0.1rem}
+.student_message_tit{float: left;margin-left: 0.08rem;margin-bottom: 0.3733rem;padding:0.32rem;font-size:0.4rem;color:grey;background:#ffffff;border-radius: 0.2rem;max-width: 5.7333rem;word-wrap: break-word;word-break: break-all;}
+
+
+/*我的课表2*/
+#mc2_content{width: 10rem;height: 17.7867rem;background: #efefef;padding-top: 1.6267rem;}
+#mc2_content img{width: 3.3733rem;height: 4.24rem;margin-left: 3.6267rem;}
+#mc2_content span{display: block;margin-left: 3.28rem;margin-top: 1.0933rem;font-size: 0.3733rem;}
+#mc2_content .enroll{width: 2.4267rem;height: 0.8133rem;margin-left: 3.8133rem;margin-top: 0.4rem;font-size: 0.3733rem;}
+
+
+
+
+

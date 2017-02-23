@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable =no">
+    <script type="text/javascript" src="../js/flexible.js"></script>
+    <script type="text/javascript" src="../js/flexible_css.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/main.css"/>
+    <title>请假</title>
+</head>
+<body id="leave_wrap">
+    <header>
+        <div class="leave_headline">
+            <strong>您哪天要请假？</strong>
+        </div>
+        <div class="date_block date_today">
+            <img class="check_img" src="../img/sa02.png" alt=""/>
+            <div class="date_content">
+                <span class="date">7月18日</span>
+                <span class="week">星期一</span>
+                <span class="which_day">今天</span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="date_block">
+            <img class="check_img" src="../img/sa02.png" alt=""/>
+            <div class="date_content">
+                <span class="date">7月19日</span>
+                <span class="week">星期二</span>
+                <span class="which_day">明天</span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="date_block">
+            <img class="check_img" src="../img/sa02.png" alt=""/>
+            <div class="date_content">
+                <span class="date">7月20日</span>
+                <span class="week">星期三</span>
+                <span class="which_day">后天</span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="date_block">
+            <img class="check_img" src="../img/sa02.png" alt=""/>
+            <div class="date_content">
+                <span class="date">7月21日</span>
+                <span class="week">星期四</span>
+                <!--<span>今天</span>-->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="date_block">
+            <img class="check_img" src="../img/sa02.png" alt=""/>
+            <div class="date_content">
+                <span class="date">7月22日</span>
+                <span class="week">星期五</span>
+                <!--<span>今天</span>-->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <div class="leave_content">
+        <!--<div class="leave_frame" id="leave_frame">-->
+            <textarea class="leave_textarea" id="leave_textarea"></textarea>
+            <div class="leave_remind" id="leave_remind">
+                <h5 class="remind" id="remind">请假别忘了给老师捎句话，告诉老师请假原因，也可以告诉老师不用去学校接孩子了！</h5>
+            </div>
+        <!--</div>-->
+    </div>
+    <footer>
+        <button id="submit_btn">提交请假申请</button>
+    </footer>
+    <!--输入请假内容，弹出输入框-->
+    <!--<div id="leave_mask" style="display: none;">-->
+        <!--<div class="leave_frame" id="leave_frame">-->
+            <!--<textarea class="popup_textarea" id="popup_textarea"></textarea>-->
+        <!--</div>-->
+        <!--<button class="complete_btn" id="complete_btn">完成</button>-->
+    <!--</div>-->
+    <!--提交失败 提示语-->
+    <div class="fail_popup" style="display: none">
+        给老师捎句话再请假吧！
+    </div>
+    <!--提交成功 提示语-->
+    <div class="success_popup" style="opacity: 0;">
+        <img src="../img/leave01.png" alt=""/>
+        <h4>成功提交请假申请</h4>
+    </div>
+    <!--提示12点后请假-->
+    <div id="alert1_mask" style="display: none;">
+        <div class="alert1_frame">
+            <div class="floor1">
+                <h4>12:00后请假仍需扣除当天的</h4>
+                <h5>水果加餐费用！</h5>
+            </div>
+            <div class="cancel">取消</div>
+            <div class="confirm">好的</div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript">
+        //点击checkbox
+        $(".date_block").first().click(function(){
+            var checkImg = $(this).find(".check_img");
+            var myDate = new Date();
+            var hour = myDate.getHours();
+            var minutes = myDate.getMinutes();
+            if ($(checkImg).attr("src") == "../img/sa02.png" && (hour > 12 || (hour == 12)&&(minutes > 0))){
+//                $(checkImg).attr("src", "../img/sa01.png");
+                $('#alert1_mask').fadeIn();
+            }else if($(checkImg).attr("src") == "../img/sa02.png" && hour < 12){
+                $(checkImg).attr("src", "../img/sa01.png");
+            }
+            else {
+                $(checkImg).attr("src", "../img/sa02.png");
+            }
+        });
+        //点击"好的"
+        $('.confirm').click(function () {
+            var checkImg = $('.date_today').find(".check_img");
+            $(checkImg).attr("src", "../img/sa01.png");
+            $('#alert1_mask').fadeOut();
+        });
+        //点击“取消”
+        $('.cancel').click(function () {
+            var checkImg = $('.date_today').find(".check_img");
+            $(checkImg).attr("src", "../img/sa02.png");
+            $('#alert1_mask').fadeOut();
+        });
+
+        //输入请假原因
+        $('#leave_textarea').click(function () {
+//            $('#leave_mask').fadeIn();
+            $(this).css('opacity','1');
+        });
+        $('#leave_textarea').blur(function () {
+            $(this).css('opacity','0');
+        });
+        //点击完成
+//        $('#complete_btn').click(function () {
+//            var oText = $('#popup_textarea').val();
+//            $('#leave_textarea').val(oText);
+//            $('#leave_textarea').css('opacity','1');
+//            $('#leave_mask').fadeOut();
+//        });
+        //点击提交请假申请
+        $('#submit_btn').click(function () {
+            var oval = $('#leave_textarea').val();
+            if(oval == ""){
+                $('.fail_popup').fadeIn(1000).fadeOut(2000);
+            }else{
+//                    $('.success_popup').fadeIn(1000).fadeOut(2000);
+                $('#leave_textarea').css('opacity','1');
+                $('.success_popup').animate({opacity:'1'},1000);
+                $('.success_popup').animate({opacity:'0'},2000, function () {
+                    window.location.href = "personalCenter.html";
+                });
+            }
+        });
+//        window.onload= function () {
+//            //点击所要div外其他位置，整个遮罩层隐藏(输入请假理由的遮罩层)
+//            var oMask = document.getElementById('leave_mask');
+//            var oFrame = document.getElementById('leave_frame');
+//            var oTextarea = document.getElementById('popup_textarea');
+//            oMask.onclick = function (event) {
+//                var e = event || window.event;
+//                var aim = e.srcElement || e.target;
+//                if(e.srcElement){
+//                    var aim = e.srcElement;
+//                    if(aim != oFrame && aim != oTextarea){
+//                        oMask.style.display = 'none';
+//                    }
+//                }else{
+//                    var aim = e.target;
+//                    if(aim != oFrame && aim != oTextarea){
+//                        oMask.style.display = 'none';
+//                    }
+//                }
+//            };
+//        };
+    </script>
+</body>
+</html>

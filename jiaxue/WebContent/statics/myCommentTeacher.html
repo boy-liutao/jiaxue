@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable =no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script type="text/javascript" src="../js/flexible.js"></script>
+    <script type="text/javascript" src="../js/flexible_css.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+    <title>彤彤妈妈</title>
+
+    <script type="application/javascript" src="../js/iscroll.js"></script>
+    <script>
+        var myScroll, pullDownEl, pullDownOffset, pullUpEl, pullUpOffset;
+
+        /**
+         * 滚动翻页 （自定义实现此方法）
+         * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+         */
+        function pullUpAction () {
+            setTimeout(function () {
+                var el, li, i;
+                el = document.getElementById('content');
+
+                for (i=1; i<11; i++) {
+                    li = document.createElement('li');
+                    li.innerHTML = "<li>" +
+                            "<img class='myavatar_teacher' src='../img/edit01.png'/>" +
+                            "<blockquote class='teacher_message_tit' style='margin-bottom: 0.2rem'>Generated row"+i+"</blockquote>" +
+                            "<div class='clearfix'></div>"
+                    "</li>";
+                    el.appendChild(li, el.childNodes[0]);
+                }
+
+                myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+            }, 1000);
+        }
+
+        /**
+         * 初始化iScroll控件
+         */
+        function loaded() {
+            pullUpEl = document.getElementById('pullUp');
+            pullUpOffset = pullUpEl.offsetHeight;
+            pullUpicon = document.getElementById('pullUpIcon');
+
+            myScroll = new iScroll('mcteacher_wrap', {
+                scrollbarClass: 'myScrollbar', /* 重要样式 */
+                useTransition: false, /* 此属性不知用意，本人从true改为false */
+                onRefresh: function () {
+                    if (pullUpEl.className.match('loading')) {
+                        pullUpEl.className = '';
+                        pullUpicon.style.display = 'none';
+                    }
+                },
+                onScrollMove: function () {
+                    if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                        pullUpEl.className = 'flip';
+                        this.maxScrollY = this.maxScrollY;
+                    } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+                        pullUpEl.className = '';
+                        this.maxScrollY = pullUpOffset;
+                    }
+                },
+                onScrollEnd: function () {
+                    if (pullUpEl.className.match('flip')) {
+                        pullUpicon.style.display = 'block';
+                        pullUpEl.className = 'loading';
+                        pullUpAction();
+                    }
+                }
+            });
+
+            setTimeout(function () { document.getElementById('mcteacher_wrap').style.left = '0'; }, 800);
+        }
+
+        //初始化绑定iScroll控件
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        document.addEventListener('DOMContentLoaded', loaded, false);
+    </script>
+    <style type="text/css">
+        #scroller {
+            position:relative;
+            -webkit-touch-callout:none;
+            -webkit-tap-highlight-color:rgba(0,0,0,0);
+            float:left;
+            width:100%;
+            /*height: 100%;*/
+            padding:0;
+        }
+        #pullUp .pullUpIcon  {
+            display:none;
+            -webkit-transition-property:-webkit-transform;
+            -webkit-transition-duration:250ms;
+            margin-left: 4rem;
+        }
+
+        #pullUp.flip .pullUpIcon {
+            -webkit-transform:rotate(0deg) translateZ(0);
+        }
+
+        #pullUp.loading .pullUpIcon {
+            background-position:0 100%;
+            -webkit-transform:rotate(0deg) translateZ(0);
+            -webkit-transition-duration:0ms;
+
+            -webkit-animation-name:loading;
+            -webkit-animation-duration:2s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:linear;
+        }
+
+        @-webkit-keyframes loading {
+            from { -webkit-transform:rotate(0deg) translateZ(0); }
+            to { -webkit-transform:rotate(360deg) translateZ(0); }
+        }
+    </style>
+</head>
+<body>
+<div id="mcteacher_wrap">
+    <div id="scroller">
+        <section class="baby_section">
+            <header>
+                <h5>星期一&nbsp;&nbsp;<time>13:40</time></h5>
+            </header>
+            <article>
+                <div class="signed_message">
+                    <h2><strong>签到信息</strong></h2>
+                    <p>我们已将<span class="baby_name">彤彤</span>安全地接到托管中心啦！</p>
+                </div>
+                <img class="signed_img" src="../img/news4.png" alt=""/>
+                <div class="clearfix"></div>
+            </article>
+        </section>
+        <section class="mcteacher_stu_comment">
+            <h5>今天&nbsp;&nbsp;13:40</h5>
+            <ul>
+                <li>
+                    <img class="teacher_avatar" src="../img/edit01.png" alt="" style="width: 0.9867rem;height: 0.9867rem;"/>
+                    <img class="teacher_message_img" src="../img/news1.png" alt="" style="width: 3.28rem;height: 2.16rem;"/>
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <img  class="teacher_avatar" src="../img/edit01.png" alt="" style="width: 0.9867rem;height: 0.9867rem;"/>
+                    <img class="teacher_message_img" src="../img/news2.png" alt=""/>
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <img class="teacher_avatar" src="../img/edit01.png" alt="" style="width: 0.9867rem;height: 0.9867rem;"/>
+                    <blockquote class="teacher_message_tit">家长您好！<br/>您孩子王晓飞今天表现非常棒！</blockquote>
+                    <div class="clearfix"></div>
+                </li>
+            </ul>
+        </section>
+        <article class="mcteacher_teacher_content">
+            <h5 class="immediately_time">今天&nbsp;&nbsp;<span class="comment1_current_time"></span></h5>
+            <ul class="content" id="content"></ul>
+            <div id="pullUp">
+                <img id="pullUpIcon" class="pullUpIcon" src="../img/loading.png" style="width: 0.5rem;height: 0.5rem"/>
+            </div>
+        </article>
+    </div>
+</div>
+<footer id="mcteacher_footer">
+    <img class="photo" src="../img/teacher05.png" alt="" />
+    <img class="camera" src="../img/teacher06.png" alt="" />
+    <textarea name="" id="teacher_mymessage" class="teacher_mymessage"></textarea>
+    <blockquote class="send" id="teacher_send">发送</blockquote>
+    <div class="clearfix"></div>
+</footer>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+    Date.prototype.Format = function (fmt) {
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    };
+    //调用
+    var otime = new Date().Format("hh:mm");
+    $('.comment1_current_time').text(otime);
+    //点击发送
+    $('#teacher_send').click(function () {
+        $('.immediately_time').show();
+        var omessage = $('#teacher_mymessage').val();
+        if (omessage == "") {
+            return false;
+        }
+        var ohtml = "<li>" +
+                "<img class='myavatar_teacher' src='../img/edit01.png'/>" +
+                "<blockquote class='teacher_message_tit' style='margin-bottom: 0.2rem'>" + omessage + "</blockquote>" +
+                "<div class='clearfix'></div>"
+                "</li>";
+        $('#mcteacher_wrap .content').append(ohtml);
+        $('#teacher_mymessage').val("");
+        var oScrollheight = document.getElementById( 'mcteacher_wrap').scrollHeight;
+        document.getElementById( 'mcteacher_wrap').scrollTop = oScrollheight;
+    });
+
+</script>
+<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

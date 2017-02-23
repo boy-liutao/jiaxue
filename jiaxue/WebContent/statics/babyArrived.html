@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<section class="baby_section">-->
+    <!--<header>-->
+    <!--<h5>昨天&nbsp;&nbsp;<time>13:40</time></h5>-->
+    <!--</header>-->
+    <!--<article>-->
+    <!--<div class="signed_message">-->
+    <!--<h2><strong>签到信息</strong></h2>-->
+    <!--<p>我们已将<span class="baby_name">彤彤</span>安全地接到托管中心啦！</p>-->
+    <!--</div>-->
+    <!--<img class="signed_img" src="../img/news4.png" alt=""/>-->
+    <!--<div class="clearfix"></div>-->
+    <!--</article>-->
+    <!--</section>-->
+    <!--<section class="baby_section">-->
+    <!--<header>-->
+    <!--<h5>昨天&nbsp;&nbsp;<time>13:40</time></h5>-->
+    <!--</header>-->
+    <!--<article>-->
+    <!--<div class="signed_message">-->
+    <!--<h2><strong>签到信息</strong></h2>-->
+    <!--<p>我们已将<span class="baby_name">彤彤</span>安全地接到托管中心啦！</p>-->
+    <!--</div>-->
+    <!--<img class="signed_img" src="../img/news4.png" alt=""/>-->
+    <!--<div class="clearfix"></div>-->
+    <!--</article>-->
+    <!--</section>-->
+    <!--<section class="baby_section">-->
+    <!--<header>-->
+    <!--<h5>昨天&nbsp;&nbsp;<time>13:40</time></h5>-->
+    <!--</header>-->
+    <!--<article>-->
+    <!--<div class="signed_message">-->
+    <!--<h2><strong>签到信息</strong></h2>-->
+    <!--<p>我们已将<span class="baby_name">彤彤</span>安全地接到托管中心啦！</p>-->
+    <!--</div>-->
+    <!--<img class="signed_img" src="../img/news4.png" alt=""/>-->
+    <!--<div class="clearfix"></div>-->
+    <!--</article>-->
+    <!--</section>-->
+    <!--<section class="baby_section">-->
+    <!--<header>-->
+    <!--<h5>昨天&nbsp;&nbsp;<time>13:40</time></h5>-->
+    <!--</header>-->
+    <!--<article>-->
+    <!--<div class="signed_message">-->
+    <!--<h2><strong>签到信息</strong></h2>-->
+    <!--<p>我们已将<span class="baby_name">彤彤</span>安全地接到托管中心啦！</p>-->
+    <!--</div>-->
+    <!--<img class="signed_img" src="../img/news4.png" alt=""/>-->
+    <!--<div class="clearfix"></div>-->
+    <!--</article>-->
+    <!--</section>-->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable =no">
+    <script type="text/javascript" src="../js/flexible.js"></script>
+    <script type="text/javascript" src="../js/flexible_css.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/main.css"/>
+    <title>宝贝到家</title>
+    <style type="text/css">
+        #img_popup{
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,1);
+        }
+        .enlarge{
+            -webkit-box-align: center;
+        }
+        /*.
+        showImg{*/
+            /*width: 100%;*/
+        /*}*/
+        #showImg_frame{
+            width: 10rem;
+            height: 60%;
+            /*background: red;*/
+            margin-top: 20%;
+            /*border: 1px solid red;*/
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body id="baby_wrap">
+    <section class="baby_section">
+        <header>
+            <h5>今天&nbsp;&nbsp;<time>13:40</time></h5>
+        </header>
+        <article>
+            <div class="signed_message">
+                <h2><strong>签到信息</strong></h2>
+                <p>我们已将<span class="baby_name">彤彤</span>安全地接到托管中心啦！</p>
+            </div>
+            <div class="signed_img">
+                <img id="myimage" src="../img/coupon.png" alt=""/>
+            </div>
+            <div class="clearfix"></div>
+        </article>
+    </section>
+    <div id="img_popup" style="display: none;">
+        <!--<div id="showImg_frame"></div>-->
+    </div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/pinchzoom.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript">
+//    var oImg = $('.signed_img img');
+//    var oImg = $('#myimage');
+//    console.log(oImg);
+//    console.log(oImg);
+window.onload = function () {
+    var w = $('.signed_img').width();
+    var h = $('.signed_img').height();
+    var img = document.getElementById("myimage");
+    var rw = img.naturalWidth;
+    var rh = img.naturalHeight;
+
+    var ratio = w/h;
+    var rRatio = rw/rh;
+//    alert(rRatio);
+    if(rRatio > ratio){
+        if(rh > h){
+            img.height = h;
+            img.width = rw * h / rh;
+        }else{
+            img.width = rw;
+            img.height = rh;
+        }
+    }else{
+        if(rw > w){
+            img.width = w;
+            img.height = rh * w /rw;
+        }else{
+            img.width = rw;
+            img.height = rh;
+        }
+    }
+//    else{
+//        img.width = w;
+//        img.height = h;
+//    }
+}
+//    $('#myimage').click(function () {
+//        var _this = $(this);
+//        $('#img_popup').fadeIn();
+//        $('#showImg_frame').empty();
+////        $(this).addClass('showImg');
+//        var w = $('#showImg_frame').width();
+//        var h = $('#showImg_frame').height();
+//        var img = document.getElementById("myimage");
+//        var rw = img.naturalWidth;
+//        var rh = img.naturalHeight;
+//
+////        var ratio = w/h;
+////        var rRatio = rw/rh;
+////        if(rRatio >= ratio){
+////            img.height =  h;
+////        }else{
+
+//            img.width = w;
+//            var oHeight = w * rh / rw;
+//            if(oHeight >= h){
+//                $(this).css('height','auto');
+//            }
+//            else{
+//                var oTop = (h-oHeight)/2;
+//                $(this).css('margin-top',oTop);
+////                console.log(h,oHeight,oTop);
+//            }
+////            $(this).css('height','100%').css('width','auto');
+////        }
+////        $(this).css('width','100%');
+//
+//        $(this).clone().appendTo($('#showImg_frame'));
+//    });
+
+
+
+
+
+$(function () {
+    $('#myimage').click(function () {
+        $('#img_popup').empty().show();
+//        var screenHeight = $('#img_popup').height();
+//        var enlargeHeight = $(this).height();
+//        console.log(screenHeight,enlargeHeight);
+//        var marginTop = (screenHeight - enlargeHeight)/2;
+//        var image = new Image();
+//        image.src = img.src;
+//        var realW = image.width;
+//        var realH = image.height;
+        var w = $('#img_popup').width();
+        var h = $('#img_popup').height();
+
+
+        var img = document.getElementById("myimage");
+        var rw = img.naturalWidth;
+        var rh = img.naturalHeight;
+        img.width = w;
+//        alert(rh);
+        var oHeight = w * rh / rw;
+
+//        $('#myimage').width('100%').css('height','auto').css('margin-top',marginTop);
+
+//        $(this).css();
+        $(this).clone().appendTo($('#img_popup'));
+        $('#img_popup').css('display','-webkit-box').addClass('enlarge');
+        $('#img_popup img').css('height',oHeight);
+
+
+//        $(this).each(function () {
+//            new RTP.PinchZoom($(this), {});
+//        });
+    });
+
+    $('#img_popup').click(function () {
+        $(this).hide();
+//        $('#myimage').css('margin-top','0');
+
+//        $('#myimage').css('height','auto');
+    });
+})
+</script>
+</body>
+</html>

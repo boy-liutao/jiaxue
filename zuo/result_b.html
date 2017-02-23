@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>学霸测试</title>
+</head>
+<body>
+<div id="classroom">
+</div>
+<div id="result">
+</div>
+<a href='index.html' id="test-ag">再测一次</a>
+<button id="start-btn" style="margin-top:10px" onClick='javascript:share()'> 分享</button>
+<div id="qrcode"></div>
+<script type="text/javascript" src="http://cdnjs.gtimg.com/cdnjs/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/style.js?v=1.5"></script>
+<script type="text/javascript" src="js/test.js?v=1.6"></script>
+<script>
+loadClassroom();
+function share(){
+	alert("弹出分享弹层");
+}
+loadBtn();
+function loadBtn(){
+	var id = urlparameter("id");
+	if (!(id == null || id == '' || id == undefined)){
+		$("#test-ag").attr("href", "index.html?fromid="+id);
+	}
+}
+</script>
+</body>
+</html>

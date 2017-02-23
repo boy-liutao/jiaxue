@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable =no">
+    <script type="text/javascript" src="../js/flexible.js"></script>
+    <script type="text/javascript" src="../js/flexible_css.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+    <title>i家学</title>
+</head>
+<body>
+<!--<div id="adver_outer">-->
+    <!--<div id="adver_inner">-->
+        <!--<img class="adver" src="../img/i00.png" alt=""/>-->
+        <!--<div class="adver" style="background: red"></div>-->
+        <!--<div class="adver" style="background: green"></div>-->
+        <!--<div class="adver" style="background: blue;"></div>-->
+        <!--<div class="adver" style="background: orange;"></div>-->
+    <!--</div>-->
+    <!--<ul id="adver_btn">-->
+        <!--<li class="adver_current"></li><li></li><li></li><li></li><li></li>-->
+    <!--</ul>-->
+<!--</div>-->
+<div id="adver_outer" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#adver_outer" data-slide-to="0" class="active"></li>
+        <li data-target="#adver_outer" data-slide-to="1"></li>
+        <li data-target="#adver_outer" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="../img/i00.png" alt="第一张"/>
+        </div>
+        <div class="item">
+            <img src="../img/i00.png" alt="第二张"/>
+        </div>
+        <div class="item">
+            <img src="../img/i00.png" alt="第三张"/>
+        </div>
+    </div>
+</div>
+
+<div id="director">
+    <a href="babyArrived.html">
+        <div class="dir_fl dir1">
+            <figure>
+                <img src="../img/i07.png" alt="" style="width: 0.64rem;height: 0.8533rem;"/>
+                <figcaption class="fig1">宝贝到家</figcaption>
+            </figure>
+        </div>
+    </a>
+    <a href="myCommentList.html">
+        <div class="dir2">
+            <figure>
+                <img src="../img/i02.png" alt="" style="width: 0.7067rem;height: 0.7467rem;"/>
+                <figcaption class="fig2">我的家评</figcaption>
+            </figure>
+        </div>
+    </a>
+    <a href="enroll.html">
+        <div class="dir_fl dir3">
+            <figure>
+                <img src="../img/i03.png" alt="" style="width: 0.6933rem;height: 0.7067rem;"/>
+                <figcaption class="fig3">家学报名</figcaption>
+            </figure>
+        </div>
+    </a>
+    <a href="news.html">
+        <div class="dir4">
+            <figure>
+                <img src="../img/i04.png" alt="" style="width: 0.5733rem;height: 0.6933rem;"/>
+                <figcaption class="fig4">家学资讯</figcaption>
+            </figure>
+        </div>
+    </a>
+    <a href="personalCenter.html">
+        <div class="dir_fl dir5">
+            <figure>
+                <img src="../img/i05.png" alt="" style="width: 0.6267rem;height: 0.72rem;"/>
+                <figcaption class="fig5">个人中心</figcaption>
+            </figure>
+        </div>
+    </a>
+    <div class="dir6">
+        <figure>
+            <img src="../img/i06.png" alt="" style="width: 0.6667rem;height: 0.76rem;"/>
+            <figcaption class="fig6">敬请期待</figcaption>
+        </figure>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $('#adver_outer').carousel({
+        //设置自动播放2秒
+        interval:2000,
+        //设置暂停按钮的事件
+        pause:'hover'
+    });
+</script>
+<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

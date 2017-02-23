@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="  
+    http://www.springframework.org/schema/beans   
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+    http://www.springframework.org/schema/tx   
+    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd   
+    http://www.springframework.org/schema/context   
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<bean id="initBean" class="com.xueba.service.InitService" init-method="init"></bean>
+	
+	<!-- 引入jdbc配置文件 -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+
+	<!--创建jdbc数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${driver}" />
+		<property name="jdbcUrl" value="${url}" />
+		<property name="user" value="${username}" />
+		<property name="password" value="${password}" />
+		
+		<property name="initialPoolSize" value="${initialPoolSize}" />
+		<!-- 连接池的最大值 -->
+		<property name="maxPoolSize" value="${maxPoolSize}" />
+		<!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->
+		<property name="minPoolSize" value="${minPoolSize}" />
+		<!-- 最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+		<property name="maxIdleTime" value="${maxIdleTime}" />
+		<property name="idleConnectionTestPeriod" value="360" />
+		<property name="preferredTestQuery" value="select 1" />  
+		<property name="acquireIncrement" value="5" />  
+		<property name="acquireRetryAttempts" value="50" />  
+        <property name="acquireRetryDelay" value="1000" />  
+        <property name="breakAfterAcquireFailure" value="true" />  
+   		<property name="autoCommitOnClose" value="false" />  
+        <property name="testConnectionOnCheckout" value="true" />     
+        <property name="maxStatements" value="100" />
+        <property name="maxStatementsPerConnection" value="5" /> 
+        
+	</bean>
+
+	<!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 创建SqlSessionFactory，同时指定数据源 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 可通过注解控制事务 -->
+	<tx:annotation-driven />
+
+	<!-- Mapper接口所在包名，Spring会自动查找其下的Mapper -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.xueba.mapper" />
+	</bean>
+
+</beans>  
